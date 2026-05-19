@@ -1,0 +1,184 @@
+---
+import {
+  MonitorSmartphone,
+  Search,
+  MapPinned,
+  FileText,
+  ArrowUpRight,
+} from "@lucide/astro";
+---
+
+<section
+  data-aos="fade-up"
+  class="py-28 bg-neutral-900/40 rounded-3xl border border-white/5 px-6 md:px-10"
+>
+  <!-- HEADER -->
+  <div class="text-center max-w-3xl mx-auto mb-20">
+    <span
+      class="inline-block px-4 py-2 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-medium mb-6"
+    >
+      Servicios profesionales
+    </span>
+
+    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+      Soluciones diseñadas para generar
+      <span class="text-[var(--color-primary)]"> crecimiento real </span>
+    </h2>
+
+    <p class="text-neutral-400 text-lg leading-relaxed">
+      Estrategias enfocadas en posicionamiento, conversión y adquisición de
+      clientes.
+    </p>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid md:grid-cols-2 gap-8">
+    <!-- CARD -->
+    <a
+      href="/servicios"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      class="group relative overflow-hidden p-8 rounded-3xl
+             bg-gradient-to-b from-neutral-900 to-neutral-950
+             border border-neutral-800
+             hover:border-[var(--color-primary)]
+             transition duration-300
+             hover:-translate-y-1
+             hover:shadow-[0_0_40px_rgba(34,197,94,0.12)]"
+    >
+      <div
+        class="mb-6 inline-flex p-4 rounded-2xl bg-[var(--color-primary)]/10 text-[var(--color-primary)]"
+      >
+        <MonitorSmartphone size={32} />
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">Landing Pages</h3>
+
+      <p class="text-neutral-400 leading-relaxed mb-8">
+        Páginas rápidas, modernas y optimizadas para convertir visitas en
+        clientes reales.
+      </p>
+
+      <div
+        class="flex items-center gap-2 text-[var(--color-primary)] font-medium"
+      >
+        Ver servicio
+        <ArrowUpRight
+          size={18}
+          class="group-hover:translate-x-1 group-hover:-translate-y-1 transition"
+        />
+      </div>
+    </a>
+
+    <!-- CARD -->
+    <a
+      href="/servicios"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      class="group relative overflow-hidden p-8 rounded-3xl
+             bg-gradient-to-b from-neutral-900 to-neutral-950
+             border border-neutral-800
+             hover:border-[var(--color-primary)]
+             transition duration-300
+             hover:-translate-y-1
+             hover:shadow-[0_0_40px_rgba(34,197,94,0.12)]"
+    >
+      <div
+        class="mb-6 inline-flex p-4 rounded-2xl bg-[var(--color-primary)]/10 text-[var(--color-primary)]"
+      >
+        <Search size={32} />
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">SEO Técnico</h3>
+
+      <p class="text-neutral-400 leading-relaxed mb-8">
+        Optimización avanzada de velocidad, indexación y arquitectura SEO para
+        mejorar rankings.
+      </p>
+
+      <div
+        class="flex items-center gap-2 text-[var(--color-primary)] font-medium"
+      >
+        Ver servicio
+        <ArrowUpRight
+          size={18}
+          class="group-hover:translate-x-1 group-hover:-translate-y-1 transition"
+        />
+      </div>
+    </a>
+
+    <!-- CARD -->
+    <a
+      href="/servicios"
+      data-aos="fade-up"
+      data-aos-delay="300"
+      class="group relative overflow-hidden p-8 rounded-3xl
+             bg-gradient-to-b from-neutral-900 to-neutral-950
+             border border-neutral-800
+             hover:border-[var(--color-primary)]
+             transition duration-300
+             hover:-translate-y-1
+             hover:shadow-[0_0_40px_rgba(34,197,94,0.12)]"
+    >
+      <div
+        class="mb-6 inline-flex p-4 rounded-2xl bg-[var(--color-primary)]/10 text-[var(--color-primary)]"
+      >
+        <MapPinned size={32} />
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">SEO Local</h3>
+
+      <p class="text-neutral-400 leading-relaxed mb-8">
+        Posicionamiento en Google Maps para atraer clientes locales con
+        intención de compra.
+      </p>
+
+      <div
+        class="flex items-center gap-2 text-[var(--color-primary)] font-medium"
+      >
+        Ver servicio
+        <ArrowUpRight
+          size={18}
+          class="group-hover:translate-x-1 group-hover:-translate-y-1 transition"
+        />
+      </div>
+    </a>
+
+    <!-- CARD -->
+    <a
+      href="/servicios"
+      data-aos="fade-up"
+      data-aos-delay="400"
+      class="group relative overflow-hidden p-8 rounded-3xl
+             bg-gradient-to-b from-neutral-900 to-neutral-950
+             border border-neutral-800
+             hover:border-[var(--color-primary)]
+             transition duration-300
+             hover:-translate-y-1
+             hover:shadow-[0_0_40px_rgba(34,197,94,0.12)]"
+    >
+      <div
+        class="mb-6 inline-flex p-4 rounded-2xl bg-[var(--color-primary)]/10 text-[var(--color-primary)]"
+      >
+        <FileText size={32} />
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">Contenido SEO</h3>
+
+      <p class="text-neutral-400 leading-relaxed mb-8">
+        Artículos optimizados para posicionar en Google y generar tráfico
+        orgánico constante.
+      </p>
+
+      <div
+        class="flex items-center gap-2 text-[var(--color-primary)] font-medium"
+      >
+        Ver servicio
+        <ArrowUpRight
+          size={18}
+          class="group-hover:translate-x-1 group-hover:-translate-y-1 transition"
+        />
+      </div>
+    </a>
+  </div>
+</section>

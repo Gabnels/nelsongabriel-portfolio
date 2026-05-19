@@ -1,17 +1,26 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/sections/Hero.astro";
+import Services from "../components/sections/Services.astro";
+import CTA from "../components/sections/CTA.astro";
+import Portfolio from "../components/sections/Portfolio.astro";
+import Testimonials from "../components/sections/Testimonials.astro";
+import ContactForm from "../components/sections/ContactForm.astro";
+import BlogPreview from "../components/sections/BlogPreview.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout>
+  <Hero />
+
+  <Services />
+
+  <Portfolio />
+
+  <Testimonials />
+
+  <BlogPreview />
+
+  <ContactForm />
+
+  <CTA />
+</MainLayout>

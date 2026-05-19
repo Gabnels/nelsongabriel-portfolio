@@ -1,0 +1,170 @@
+<section data-aos="fade-up" class="relative py-16 md:py-32 overflow-hidden">
+  <!-- Glow Background -->
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px]
+                bg-[var(--color-primary)]/10 blur-[140px] rounded-full"
+    >
+    </div>
+
+    <div
+      class="absolute bottom-0 right-0 w-[400px] h-[400px]
+                bg-blue-500/10 blur-[120px] rounded-full"
+    >
+    </div>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-20 items-center">
+    <!-- LEFT CONTENT -->
+    <div class="text-center lg:text-left">
+      <!-- Badge -->
+      <div class="mb-7">
+        <span
+          class="inline-flex items-center gap-2 px-5 py-2 rounded-full
+                 bg-[var(--color-primary)]/10
+                 text-[var(--color-primary)]
+                 text-sm font-medium
+                 border border-[var(--color-primary)]/20"
+        >
+          🚀 SEO Local · Diseño Web · Google Maps
+        </span>
+      </div>
+
+      <!-- Heading -->
+      <h1
+        class="text-4xl md:text-6xl xl:text-7xl font-black leading-tight
+               tracking-tight max-w-4xl"
+      >
+        Consigue más clientes con
+
+        <span class="text-[var(--color-primary)]"> SEO </span>, Google Maps y
+        páginas web rápidas
+      </h1>
+
+      <!-- Description -->
+      <p
+        class="mt-8 text-lg md:text-xl text-neutral-400
+               leading-relaxed max-w-2xl"
+      >
+        Ayudo a negocios a posicionarse en Google, mejorar su visibilidad local
+        y convertir visitas en clientes reales mediante estrategias SEO,
+        optimización web y sistemas digitales modernos.
+      </p>
+
+      <!-- CTA -->
+      <div
+        class="mt-10 flex flex-col sm:flex-row gap-5 justify-center lg:justify-start"
+      >
+        <a
+          href="#contacto"
+          onclick="trackEvent('cta_click')"
+          class="inline-flex items-center justify-center
+                 bg-[var(--color-primary)] text-black
+                 px-8 py-4 rounded-2xl
+                 font-bold text-lg
+                 hover:scale-105 active:scale-95
+                 transition duration-300
+                 shadow-[0_0_30px_rgba(34,197,94,0.25)]"
+        >
+          Solicitar auditoría gratis
+        </a>
+
+        <a
+          href="/servicios"
+          class="inline-flex items-center justify-center
+                 border border-neutral-700
+                 px-8 py-4 rounded-2xl
+                 text-white font-semibold
+                 hover:border-[var(--color-primary)]
+                 hover:bg-neutral-900/60
+                 transition duration-300"
+        >
+          Ver servicios
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="mt-10 grid grid-cols-3 gap-3 max-w-xl mx-auto lg:mx-0">
+        <div
+          class="p-5 rounded-2xl border border-neutral-800
+                 bg-neutral-900/50 backdrop-blur"
+        >
+          <p class="text-3xl font-black text-[var(--color-primary)]">+200%</p>
+
+          <p class="text-sm text-neutral-400 mt-2">Más visibilidad</p>
+        </div>
+
+        <div
+          class="p-5 rounded-2xl border border-neutral-800
+                 bg-neutral-900/50 backdrop-blur"
+        >
+          <p class="text-3xl font-black text-[var(--color-primary)]">SEO</p>
+
+          <p class="text-sm text-neutral-400 mt-2">Optimización técnica</p>
+        </div>
+
+        <div
+          class="p-5 rounded-2xl border border-neutral-800
+                 bg-neutral-900/50 backdrop-blur"
+        >
+          <p class="text-3xl font-black text-[var(--color-primary)]">Maps</p>
+
+          <p class="text-sm text-neutral-400 mt-2">Clientes locales</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT VISUAL -->
+    <div class="relative">
+      <!-- Floating Card -->
+      <div
+        class="absolute -top-6 -left-6 z-10 hidden md:block
+               bg-neutral-900/90 border border-neutral-800
+               rounded-2xl p-4 backdrop-blur
+               shadow-2xl"
+      >
+        <p class="text-sm text-neutral-400 mb-1">Tráfico orgánico</p>
+
+        <p class="text-2xl font-black text-[var(--color-primary)]">+184%</p>
+      </div>
+
+      <!-- Main Visual -->
+      <div
+        class="relative rounded-[2rem]
+               border border-neutral-800
+               bg-neutral-900/60
+               backdrop-blur
+               overflow-hidden
+               shadow-[0_0_60px_rgba(34,197,94,0.10)]"
+      >
+        <dotlottie-player
+          src="/lottie/analytics-growth.json"
+          background="transparent"
+          speed="1"
+          style="width: 100%; height: 100%; min-height: 320px;"
+          loop
+          autoplay
+        >
+        </dotlottie-player>
+      </div>
+
+      <!-- Floating Badge -->
+      <div
+        class="absolute -bottom-6 right-0 md:right-6
+               bg-neutral-900/90 border border-neutral-800
+               rounded-2xl p-5 backdrop-blur
+               shadow-2xl"
+      >
+        <p class="text-sm text-neutral-400 mb-1">Google Maps</p>
+
+        <p class="text-xl font-bold text-white">Posicionamiento local</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lottie Script -->
+  <script
+    type="module"
+    src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+  ></script>
+</section>

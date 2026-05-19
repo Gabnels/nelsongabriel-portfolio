@@ -1,0 +1,122 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Dashboard Analytics">
+
+  <section class="py-20">
+    
+    <h1 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      Dashboard de métricas
+    </h1>
+
+    <!-- GRID -->
+    <div id="stats" class="grid md:grid-cols-3 gap-8"></div>
+
+    <div class="mt-16">
+      <h2 class="text-2xl font-semibold mb-6">
+        Gráfica de eventos
+      </h2>
+
+      <div class="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6">
+        <canvas id="chart"></canvas>
+      </div>
+    </div>
+
+    <!-- EVENTOS -->
+    <div class="mt-16">
+      <h2 class="text-2xl font-semibold mb-6">
+        Actividad reciente
+      </h2>
+
+      <div id="events" class="space-y-4"></div>
+    </div>
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const events = JSON.parse(localStorage.getItem("events") || "[]");
+
+    const stats = {
+      total: events.length,
+      cta: events.filter(e => e.event === "cta_click").length,
+      whatsapp: events.filter(e => e.event === "whatsapp_click").length,
+      form: events.filter(e => e.event === "form_submit").length,
+    };
+
+    const statsContainer = document.getElementById("stats");
+
+    statsContainer.innerHTML = `
+      <div class="p-8 rounded-2xl bg-neutral-900/60 border border-neutral-800">
+        <p class="text-neutral-400">Total eventos</p>
+        <h2 class="text-3xl font-bold mt-2">${stats.total}</h2>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-neutral-900/60 border border-neutral-800">
+        <p class="text-neutral-400">Clicks CTA</p>
+        <h2 class="text-3xl font-bold mt-2 text-[var(--color-primary)]">${stats.cta}</h2>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-neutral-900/60 border border-neutral-800">
+        <p class="text-neutral-400">WhatsApp</p>
+        <h2 class="text-3xl font-bold mt-2 text-[var(--color-primary)]">${stats.whatsapp}</h2>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-neutral-900/60 border border-neutral-800">
+        <p class="text-neutral-400">Formularios</p>
+        <h2 class="text-3xl font-bold mt-2 text-[var(--color-primary)]">${stats.form}</h2>
+      </div>
+    `;
+
+    // EVENTOS RECIENTES
+    const eventsContainer = document.getElementById("events");
+
+    const recent = events.slice(-5).reverse();
+
+    eventsContainer.innerHTML = recent.map(e => `
+      <div class="p-4 rounded-xl bg-neutral-900/50 border border-neutral-800">
+        <p class="text-sm text-neutral-400">${new Date(e.date).toLocaleString()}</p>
+        <p class="font-medium">${e.event}</p>
+      </div>
+    `).join("");
+
+    const ctx = document.getElementById("chart");
+
+    const data = {
+      labels: ["CTA", "WhatsApp", "Form"],
+      datasets: [
+        {
+          label: "Eventos",
+          data: [stats.cta, stats.whatsapp, stats.form],
+          borderWidth: 2,
+          tension: 0.3,
+        },
+    ],
+};
+
+new Chart(ctx, {
+  type: "line",
+  data: data,
+  options: {
+    plugins: {
+      legend: {
+        labels: {
+          color: "#fff",
+        },
+      },
+    },
+    scales: {
+      x: {
+        ticks: { color: "#aaa" },
+      },
+      y: {
+        ticks: { color: "#aaa" },
+      },
+    },
+  },
+});
+  </script>
+
+</MainLayout>

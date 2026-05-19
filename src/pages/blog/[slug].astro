@@ -1,0 +1,373 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getCollection, render } from "astro:content";
+
+// 1. Generación de rutas estáticas
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+// 2. Obtención del post y renderizado (Método Astro v6)
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+
+/* Lógica de Tiempo de Lectura */
+const bodyText = post.body || "";
+const words = bodyText.trim().split(/\s+/).length;
+const readingTime = Math.max(1, Math.ceil(words / 200));
+
+/* Lógica de Posts Relacionados */
+const allPosts = await getCollection("blog");
+const related = allPosts
+  .filter((item) => item.id !== post.id)
+  .sort((a, b) => {
+    if (
+      a.data.category === post.data.category &&
+      b.data.category !== post.data.category
+    )
+      return -1;
+    if (
+      a.data.category !== post.data.category &&
+      b.data.category === post.data.category
+    )
+      return 1;
+    return b.data.date.getTime() - a.data.date.getTime();
+  })
+  .slice(0, 3);
+
+/* Schema Metadata (SEO) */
+const articleSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.data.title,
+    description: post.data.excerpt,
+    image: [`https://nelsongabriel.com${post.data.image}`],
+    author: {
+      "@type": "Person",
+      name: "Nelson Gabriel",
+      url: "https://nelsongabriel.com",
+      image: "https://nelsongabriel.com/authors/nelson.jpg",
+      sameAs: [
+        "https://linkedin.com/in/TU-USUARIO",
+        "https://github.com/TU-USUARIO",
+        "https://instagram.com/TU-USUARIO",
+      ],
+      jobTitle: "SEO Specialist & Web Developer",
+    },
+    datePublished: post.data.date.toISOString(),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://nelsongabriel.com/blog/${post.id}`,
+    },
+  },
+];
+---
+
+<MainLayout
+  title={`${post.data.title} | Nelson Gabriel`}
+  description={post.data.excerpt}
+  schema={articleSchema}
+>
+  <section class="py-20 md:py-24">
+    <article class="max-w-5xl mx-auto px-6">
+      <!-- Breadcrumb -->
+      <nav
+        class="mb-8 text-sm text-neutral-500 flex flex-wrap items-center gap-2"
+      >
+        <a href="/" class="hover:text-white transition">Inicio</a>
+        <span>/</span>
+        <a href="/blog" class="hover:text-white transition">Blog</a>
+        <span>/</span>
+        <span class="text-[var(--color-primary)]">{post.data.title}</span>
+      </nav>
+
+      <div class="mb-8">
+        <a
+          href="/blog"
+          class="text-sm text-neutral-400 hover:text-[var(--color-primary)] transition"
+        >
+          ← Volver al blog
+        </a>
+      </div>
+
+      <!-- Imagen Destacada -->
+      <div
+        class="rounded-3xl overflow-hidden border border-neutral-800 shadow-2xl mb-10"
+      >
+        <img
+          src={post.data.image}
+          alt={post.data.title}
+          class="w-full h-[300px] md:h-[550px] object-cover"
+        />
+      </div>
+
+      <!-- Meta Info -->
+      <div class="flex flex-wrap items-center gap-4 mb-6">
+        <span
+          class="px-4 py-2 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-semibold"
+        >
+          {post.data.category}
+        </span>
+        <span class="text-neutral-500 text-sm">
+          {
+            post.data.date.toLocaleDateString("es-ES", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })
+          }
+        </span>
+        <span class="text-neutral-600 text-sm italic">
+          Lectura de {readingTime} min
+        </span>
+      </div>
+
+      <!-- Título Principal (H1) -->
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-8 text-white">
+        {post.data.title}
+      </h1>
+
+      <!-- Excerpt/Intro -->
+      <p
+        class="text-xl md:text-2xl text-neutral-400 leading-relaxed max-w-4xl mb-16 border-l-4 border-[var(--color-primary)] pl-6"
+      >
+        {post.data.excerpt}
+      </p>
+
+      <!-- CONTENIDO + ÍNDICE -->
+      <div class="grid lg:grid-cols-[260px_1fr] gap-12 items-start">
+        <!-- ÍNDICE DESKTOP -->
+        <aside class="hidden lg:block sticky top-28">
+          <div
+            class="rounded-2xl border border-neutral-800 bg-neutral-900/40 backdrop-blur p-6"
+          >
+            <h3
+              class="text-sm font-bold uppercase tracking-widest text-[var(--color-primary)] mb-5"
+            >
+              Índice
+            </h3>
+
+            <ul class="space-y-3">
+              {
+                headings.map((heading) => (
+                  <li class:list={[heading.depth === 3 ? "ml-4" : ""]}>
+                    <a
+                      href={`#${heading.slug}`}
+                      class="text-sm text-neutral-400 hover:text-white transition leading-relaxed"
+                    >
+                      {heading.text}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </aside>
+
+        <!-- CONTENIDO -->
+        <div>
+          <!-- ÍNDICE MOBILE -->
+          <div
+            class="lg:hidden rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6 mb-10"
+          >
+            <h3
+              class="text-sm font-bold uppercase tracking-widest text-[var(--color-primary)] mb-5"
+            >
+              Índice
+            </h3>
+
+            <ul class="space-y-3">
+              {
+                headings.map((heading) => (
+                  <li class:list={[heading.depth === 3 ? "ml-4" : ""]}>
+                    <a
+                      href={`#${heading.slug}`}
+                      class="text-sm text-neutral-400 hover:text-white transition leading-relaxed"
+                    >
+                      {heading.text}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+          <!-- ARTÍCULO -->
+          <div
+            class="prose prose-invert prose-green prose-lg max-w-3xl
+  prose-headings:text-white
+  prose-headings:font-bold
+  prose-p:text-neutral-300
+  prose-p:leading-relaxed
+  prose-li:text-neutral-300
+  prose-strong:text-[var(--color-primary)]
+  prose-img:rounded-3xl"
+          >
+            <Content />
+          </div>
+
+          <!-- AUTHOR BOX -->
+          <div
+            class="mt-16 max-w-3xl rounded-[2rem]
+         border border-white/10
+         bg-gradient-to-br from-neutral-900 to-neutral-950
+         p-8 md:p-10
+         shadow-[0_0_40px_rgba(0,0,0,0.35)]"
+          >
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+              <!-- AVATAR -->
+              <div
+                class="w-20 h-20 rounded-2xl
+         overflow-hidden
+         border border-[var(--color-primary)]/20
+         shrink-0"
+              >
+                <img
+                  src="/authors/nelson.jpg"
+                  alt="Nelson Gabriel"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+
+              <!-- CONTENT -->
+              <div class="flex-1">
+                <!-- LABEL -->
+                <p
+                  class="text-sm uppercase tracking-[0.2em]
+               text-[var(--color-primary)]
+               font-semibold mb-3"
+                >
+                  Autor del artículo
+                </p>
+
+                <!-- NAME -->
+                <h3 class="text-2xl font-bold text-white mb-2">
+                  Nelson Gabriel
+                </h3>
+
+                <!-- ROLE -->
+                <p
+                  class="text-neutral-400 mb-7
+         leading-relaxed
+         text-sm md:text-base"
+                >
+                  SEO Técnico · Core Web Vitals · SEO Local · UX & Conversión
+                </p>
+
+                <!-- DESCRIPTION -->
+                <p class="text-neutral-300 leading-relaxed mb-6">
+                  Especializado en SEO técnico, optimización web y estrategias
+                  digitales enfocadas en posicionamiento, velocidad y conversión
+                  para negocios modernos.
+                </p>
+
+                <!-- SOCIAL LINKS -->
+                <div class="flex flex-wrap gap-4 mt-8">
+                  <!-- LINKEDIN -->
+                  <a
+                    href="https://linkedin.com/in/TU-USUARIO"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-5 py-3 rounded-xl
+           bg-white/5 border border-white/10
+           hover:border-[var(--color-primary)]/40
+           hover:bg-[var(--color-primary)]/5
+           transition duration-300
+           text-sm text-neutral-300 hover:text-white"
+                  >
+                    LinkedIn
+                  </a>
+
+                  <!-- GITHUB -->
+                  <a
+                    href="https://github.com/TU-USUARIO"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-5 py-3 rounded-xl
+           bg-white/5 border border-white/10
+           hover:border-[var(--color-primary)]/40
+           hover:bg-[var(--color-primary)]/5
+           transition duration-300
+           text-sm text-neutral-300 hover:text-white"
+                  >
+                    GitHub
+                  </a>
+
+                  <!-- INSTAGRAM -->
+                  <a
+                    href="https://instagram.com/TU-USUARIO"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-5 py-3 rounded-xl
+           bg-white/5 border border-white/10
+           hover:border-[var(--color-primary)]/40
+           hover:bg-[var(--color-primary)]/5
+           transition duration-300
+           text-sm text-neutral-300 hover:text-white"
+                  >
+                    Instagram
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA de Conversión -->
+      <div
+        class="mt-24 p-8 md:p-16 rounded-[2.5rem] border border-neutral-800 bg-neutral-900/50 backdrop-blur-sm text-center"
+      >
+        <p
+          class="text-[var(--color-primary)] font-bold tracking-tighter uppercase mb-4"
+        >
+          ¿Tu web no está vendiendo?
+        </p>
+        <h3 class="text-3xl md:text-5xl font-extrabold mb-8 text-white">
+          Consigue una auditoría gratuita de tu estrategia digital
+        </h3>
+        <a
+          href="/#contacto"
+          class="inline-block bg-[var(--color-primary)] text-black px-12 py-5 rounded-2xl font-bold text-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(0,255,0,0.2)]"
+        >
+          Quiero mi Auditoría Gratis
+        </a>
+      </div>
+
+      <!-- Sección Relacionados -->
+      <div class="mt-32">
+        <h2 class="text-3xl font-bold mb-12 text-white flex items-center gap-4">
+          Contenido relacionado
+          <div class="h-px flex-1 bg-neutral-800"></div>
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          {
+            related.map((item) => (
+              <a href={`/blog/${item.id}`} class="group">
+                <div class="rounded-2xl overflow-hidden border border-neutral-800 mb-4 shadow-lg group-hover:border-[var(--color-primary)] transition-colors">
+                  <img
+                    src={item.data.image}
+                    alt={item.data.title}
+                    class="w-full h-48 object-cover group-hover:scale-110 transition duration-700"
+                  />
+                </div>
+                <p class="text-sm text-[var(--color-primary)] font-medium mb-2">
+                  {item.data.category}
+                </p>
+                <h3 class="font-bold text-xl text-neutral-200 group-hover:text-white transition-colors leading-snug">
+                  {item.data.title}
+                </h3>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </article>
+  </section>
+</MainLayout>

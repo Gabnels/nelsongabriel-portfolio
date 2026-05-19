@@ -1,0 +1,118 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { projects } from "../../data/projects";
+---
+
+<MainLayout title="Portfolio | Nelson Gabriel">
+
+<section class="py-28">
+
+  <!-- HERO -->
+  <div class="max-w-3xl mx-auto text-center mb-20">
+
+    <span class="inline-block px-4 py-2 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-medium mb-6">
+      Casos reales · Resultados medibles
+    </span>
+
+    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+      Proyectos que generan <span class="text-[var(--color-primary)]">crecimiento</span>
+    </h1>
+
+    <p class="text-neutral-400 text-lg md:text-xl leading-relaxed mb-8">
+      SEO local, páginas que convierten y estrategias de tráfico orgánico diseñadas para negocios reales.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-4 text-sm text-neutral-400">
+      <span>+120% llamadas</span>
+      <span>•</span>
+      <span>+35% reservas</span>
+      <span>•</span>
+      <span>+10K visitas/mes</span>
+    </div>
+
+  </div>
+
+<!-- FILTRO VISUAL -->
+<div class="flex flex-wrap justify-center gap-3 mb-14">
+
+  <span class="px-5 py-2 rounded-full bg-[var(--color-primary)] text-black text-sm font-semibold">
+    Todos
+  </span>
+
+  <span class="px-5 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-sm text-neutral-300">
+    SEO Local
+  </span>
+
+  <span class="px-5 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-sm text-neutral-300">
+    Webs que venden
+  </span>
+
+  <span class="px-5 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-sm text-neutral-300">
+    SEO Contenido
+  </span>
+
+</div>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    {projects.map(project => (
+      <a href={`/portfolio/${project.slug}`}
+         class="group rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800
+                hover:border-[var(--color-primary)] transition duration-300">
+
+        <!-- Imagen -->
+        <div class="h-48 overflow-hidden">
+          <img src={project.image}
+             class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+        </div>
+
+        <div class="p-6">
+
+          <p class="text-xs text-neutral-400 mb-1">
+            {project.business} · {project.location}
+          </p>
+
+          <h3 class="text-xl font-semibold mb-2">
+            {project.title}
+          </h3>
+
+          <p class="text-neutral-400 text-sm mb-4">
+            {project.description}
+          </p>
+
+          <!-- Badge resultado -->
+          <span class="inline-block bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-sm">
+            {project.result}
+          </span>
+
+        </div>
+
+      </a>
+    ))}
+
+    </div>
+
+  <!-- CTA FINAL -->
+<div class="max-w-5xl mx-auto mt-20 p-10 rounded-3xl bg-gradient-to-r from-neutral-900 to-neutral-800 border border-neutral-700 text-center">
+
+  <p class="text-sm uppercase tracking-widest text-[var(--color-primary)] mb-3">
+    Último paso
+  </p>
+
+  <h3 class="text-3xl md:text-4xl font-bold mb-5">
+    Si tu negocio no está creciendo online, podemos corregirlo.
+  </h3>
+
+  <p class="text-neutral-400 text-lg mb-8 max-w-2xl mx-auto">
+    Analizo tu web, tu posicionamiento y tus oportunidades reales de mejora.
+  </p>
+
+  <a href="/#contacto"
+     class="inline-block bg-[var(--color-primary)] text-black px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 transition">
+    Quiero mi Auditoría Gratis
+  </a>
+
+</div>
+</section>
+
+</MainLayout>

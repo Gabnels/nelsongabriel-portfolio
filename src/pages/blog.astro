@@ -1,0 +1,121 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+
+// Obtenemos la colección de blog configurada en content.config.ts
+const posts = await getCollection("blog");
+
+// Ordenar por fecha (más nuevos primero)
+// Como usamos z.coerce.date() en el config, post.data.date ya es un objeto Date
+posts.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<MainLayout title="Blog | Nelson Gabriel">
+
+<section class="py-28">
+
+  <!-- HERO -->
+  <div class="max-w-4xl mx-auto text-center mb-20">
+
+    <span class="inline-block px-4 py-2 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-medium mb-6">
+      SEO · Web · Crecimiento Digital
+    </span>
+
+    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+      Estrategias reales para hacer <span class="text-[var(--color-primary)]">crecer</span> tu negocio online
+    </h1>
+
+    <p class="text-neutral-400 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+      Guías prácticas sobre SEO local, páginas web que convierten, tráfico orgánico y oportunidades reales de crecimiento digital.
+    </p>
+
+  </div>
+
+  <!-- GRID BLOG -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    {posts.map((post) => (
+      <a
+        href={`/blog/${post.id}`}
+        class="group rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 hover:-translate-y-1 hover:border-[var(--color-primary)] transition duration-300"
+      >
+
+        <div class="h-52 overflow-hidden">
+          <img
+            src={post.data.image}
+            alt={post.data.title}
+            class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+          />
+        </div>
+
+        <div class="p-8">
+
+          <p class="text-sm text-[var(--color-primary)] mb-3">
+            {post.data.category}
+          </p>
+
+          <h2 class="text-2xl font-bold mb-4">
+            {post.data.title}
+          </h2>
+
+          <p class="text-neutral-400">
+            {post.data.excerpt}
+          </p>
+
+        </div>
+
+      </a>
+    ))}
+
+  </div>
+
+  <!-- CATEGORÍAS -->
+  <div class="flex flex-wrap justify-center gap-3 mt-20 mb-16">
+
+    <span class="px-5 py-2 rounded-full bg-[var(--color-primary)] text-black text-sm font-semibold">
+      SEO Local
+    </span>
+
+    <span class="px-5 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-sm text-neutral-300">
+      Diseño Web
+    </span>
+
+    <span class="px-5 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-sm text-neutral-300">
+      Conversión
+    </span>
+
+    <span class="px-5 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-sm text-neutral-300">
+      Tráfico Orgánico
+    </span>
+
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="max-w-5xl mx-auto mt-10 p-10 rounded-3xl bg-gradient-to-r from-neutral-900 to-neutral-800 border border-neutral-700 text-center">
+
+    <p class="text-sm uppercase tracking-widest text-[var(--color-primary)] mb-3">
+      ¿Necesitas ayuda real?
+    </p>
+
+    <h2 class="text-3xl md:text-4xl font-bold mb-5">
+      Leer estrategias está bien. Aplicarlas correctamente es lo que da resultados.
+    </h2>
+
+    <p class="text-neutral-400 text-lg mb-8 max-w-2xl mx-auto">
+      Analizo tu negocio y te digo qué hacer para crecer online.
+    </p>
+
+    <a
+      href="/#contacto"
+      class="inline-block bg-[var(--color-primary)] text-black px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 transition"
+    >
+      Quiero Mi Auditoría Gratis
+    </a>
+
+  </div>
+
+</section>
+
+</MainLayout>

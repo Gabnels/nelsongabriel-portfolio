@@ -1,0 +1,71 @@
+<section id="contacto" data-aos="fade-up" class="py-28 scroll-mt-32">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
+      Solicita tu auditoría SEO
+    </h2>
+
+    <p class="text-neutral-400 text-center mb-12">
+      Cuéntame sobre tu negocio y te diré cómo mejorar tu posicionamiento.
+    </p>
+
+    <form
+      action="https://formspree.io/f/mojywkkb"
+      method="POST"
+      onsubmit="trackEvent('form_submit')"
+      class="space-y-6 bg-neutral-900/60 border border-neutral-800 p-8 rounded-2xl backdrop-blur"
+    >
+      <!-- Nombre -->
+      <div>
+        <label class="block text-sm mb-2 text-neutral-300"> Nombre </label>
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Tu nombre"
+          class="w-full p-3 rounded-lg bg-neutral-950 border border-neutral-800 focus:border-[var(--color-primary)] focus:outline-none"
+          required
+        />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block text-sm mb-2 text-neutral-300"> Email </label>
+
+        <input
+          type="email"
+          name="email"
+          placeholder="tu@email.com"
+          class="w-full p-3 rounded-lg bg-neutral-950 border border-neutral-800 focus:border-[var(--color-primary)] focus:outline-none"
+          required
+        />
+      </div>
+
+      <!-- Mensaje -->
+      <div>
+        <label class="block text-sm mb-2 text-neutral-300"> Mensaje </label>
+
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="Describe tu proyecto o negocio..."
+          class="w-full p-3 rounded-lg bg-neutral-950 border border-neutral-800 focus:border-[var(--color-primary)] focus:outline-none"
+          required></textarea>
+      </div>
+
+      <!-- Redirect -->
+      <input
+        type="hidden"
+        name="_redirect"
+        value="https://tudominio.com/gracias"
+      />
+
+      <!-- Botón -->
+      <button
+        type="submit"
+        class="w-full bg-[var(--color-primary)] text-black font-semibold py-3 rounded-lg hover:opacity-90 transition"
+      >
+        Enviar solicitud
+      </button>
+    </form>
+  </div>
+</section>
