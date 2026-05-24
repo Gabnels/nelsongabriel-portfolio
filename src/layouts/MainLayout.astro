@@ -5,55 +5,65 @@ import Footer from "../components/layout/Footer.astro";
 import AOS from "../components/AOS.astro";
 import WhatsAppButton from "../components/WhatsAppButton.astro";
 
-const { 
+const {
   title = "Nelson Gabriel | SEO & Web Optimization",
   description = "Servicios SEO, SEO local y desarrollo web rápido. Atrae más clientes con estrategias profesionales.",
-  schema = null
+  schema = null,
 } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>{title}</title>
-  <meta name="description" content={description} />
-  <meta name="author" content="Nelson Gabriel" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#22c55e" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Nelson Gabriel" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#22c55e" />
 
-  <link rel="canonical" href={`https://nelsongabriel.com${Astro.url.pathname}`} />
-  <link rel="icon" type="image/png" href="/favicon-NG.PNG" />
+    <link
+      rel="canonical"
+      href={`https://nelson-gabriel.com${Astro.url.pathname}`}
+    />
+    <link rel="icon" type="image/png" href="/favicon-NG.PNG" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:image" content="https://nelsongabriel.com/logo-ng.png" />
-  <meta property="og:url" content={`https://nelsongabriel.com${Astro.url.pathname}`} />
-  <meta property="og:site_name" content="Nelson Gabriel" />
-  <meta property="og:locale" content="es_ES" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta
+      property="og:image"
+      content="https://nelson-gabriel.com/logo-ng.png"
+    />
+    <meta
+      property="og:url"
+      content={`https://nelson-gabriel.com${Astro.url.pathname}`}
+    />
+    <meta property="og:site_name" content="Nelson Gabriel" />
+    <meta property="og:locale" content="es_ES" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content="https://nelsongabriel.com/logo-ng.png" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta
+      name="twitter:image"
+      content="https://nelson-gabriel.com/logo-ng.png"
+    />
 
-  {schema && (
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify(schema)}
-  />
-)}
-
-</head>
+    {
+      schema && (
+        <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+      )
+    }
+  </head>
 
   <body class="bg-neutral-950 text-white">
     <Navbar />
-    
+
     <main class="max-w-6xl mx-auto px-6 space-y-32">
       <slot />
     </main>
@@ -64,6 +74,5 @@ const {
     <WhatsAppButton />
 
     <script is:inline src="/scripts/analytics.js"></script>
-
   </body>
 </html>
