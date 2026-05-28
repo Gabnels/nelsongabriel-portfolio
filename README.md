@@ -1,43 +1,133 @@
-# Astro Starter Kit: Minimal
+# Nelson Gabriel — High-Performance SEO Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
+<p align="center">
+  <img src="https://i.postimg.cc/QxyH4BBM/image.png" alt="Nelson Gabriel Portfolio Banner" width="100%" />
+</p>
+
+<p align="center">
+  <strong>Local SEO • Technical SEO • High-Performance Websites • Web Optimization</strong>
+</p>
+
+<p align="center">
+  Helping businesses improve online visibility through fast, scalable, and SEO-optimized digital experiences.
+</p>
+
+---
+
+## 🚀 Live Website
+
+🌐 https://nelson-gabriel.com
+
+---
+
+# ⚡ Tech Stack
+
+<p align="left">
+
+<img src="https://skillicons.dev/icons?i=astro" />
+<img src="https://skillicons.dev/icons?i=tailwind" />
+<img src="https://skillicons.dev/icons?i=js" />
+<img src="https://skillicons.dev/icons?i=ts" />
+<img src="https://skillicons.dev/icons?i=react" />
+<img src="https://skillicons.dev/icons?i=vercel" />
+<img src="https://skillicons.dev/icons?i=markdown" />
+
+</p>
+
+---
+
+# 🔥 Features
+
+- SEO-Optimized Architecture
+- High Lighthouse Performance
+- Fast Loading Experience
+- Responsive Modern UI
+- Conversion-Oriented Layout
+- Local SEO Focus
+- Clean Scalable Structure
+- Optimized User Experience
+
+---
+
+# 📊 Lighthouse Focus
+
+| Metric | Score |
+|---|---|
+| Performance | 98+ |
+| SEO | 100 |
+| Accessibility | 95+ |
+| Best Practices | 100 |
+
+---
+
+# 🖼️ Preview
+
+<p align="center">
+  <img src="https://i.postimg.cc/QxyH4BBM/image.png" width="100%" />
+</p>
+
+---
+
+# 📂 Project Structure
+
+```bash
+src/
+ ├── components/
+ ├── layouts/
+ ├── pages/
+ ├── styles/
+ ├── content/
+ └── assets/
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+# 🎯 Project Goals
 
-Inside of your Astro project, you'll see the following folders and files:
+This project was built to demonstrate:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Modern SEO architecture
+- Web performance optimization
+- High-converting landing structures
+- Clean frontend development practices
+- Scalable Astro workflows
+- Premium branding and UX
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+# 🧠 Optimization Strategy
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Semantic HTML structure
+- Optimized asset loading
+- Lightweight architecture
+- Performance-first development
+- Mobile-first responsive design
+- SEO-friendly content structure
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+# 📬 Contact
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+🌐 Website: https://nelson-gabriel.com
 
-## 👀 Want to learn more?
+💼 LinkedIn:
+https://linkedin.com/in/nelsongabrielseo
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+📧 Email:
+nelsongabrr@gmail.com
+
+---
+
+# ⭐ Future Improvements
+
+- Advanced analytics dashboard
+- More case studies
+- Dynamic CMS integration
+- Enhanced blog architecture
+- Interactive SEO reports
+
+---
+
+<p align="center">
+  Built with Astro + Performance & SEO mindset ⚡
+</p>
