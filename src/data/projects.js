@@ -195,4 +195,170 @@ El sitio no tenía tráfico ni estrategia de contenido.
       link: "/#contacto",
     },
   },
+
+  {
+    slug: "nelson-gabriel-portfolio",
+
+    business: "Nelson Gabriel",
+    location: "Nicaragua",
+
+    title: "Desarrollo y optimización SEO de NelsonGabriel.com",
+
+    category: "Desarrollo Web + SEO Técnico",
+
+    image: "/images/nelson-gabriel/project-cover.png",
+
+    beforeImage: "/images/nelson-gabriel/before.png",
+
+    afterImage: "/images/nelson-gabriel/analytics.png",
+
+    analyticsImage: "/images/nelson-gabriel/analytics.png",
+
+    searchConsoleImage: "/images/nelson-gabriel/search-console.png",
+
+    lighthouseImage: "/images/nelson-gabriel/lighthouse.png",
+
+    description:
+      "Diseño, desarrollo y optimización de una plataforma profesional construida con Astro para demostrar habilidades reales en desarrollo web moderno, SEO técnico, rendimiento y generación de oportunidades de negocio.",
+
+    result: "Proyecto real en crecimiento",
+
+    metrics: [
+      { label: "Performance", value: "84" },
+      { label: "Usuarios", value: "60" },
+      { label: "Eventos", value: "339" },
+    ],
+
+    problem: `
+La necesidad principal era construir una presencia digital profesional que sirviera como demostración práctica de conocimientos en desarrollo web, SEO técnico y optimización de rendimiento.
+
+No existía una plataforma centralizada para mostrar servicios, proyectos, contenido especializado y futuros casos de estudio.
+
+Además, era necesario crear una base sólida preparada para posicionamiento orgánico, captación de clientes y crecimiento a largo plazo.
+  `,
+
+    solution: `
+• Desarrollo completo utilizando Astro
+
+• Arquitectura modular basada en componentes reutilizables
+
+• Implementación de blog optimizado para SEO
+
+• Configuración de Google Analytics 4
+
+• Integración con Google Search Console
+
+• Optimización de Core Web Vitals
+
+• Diseño responsive mobile-first
+
+• Sistema dinámico para portfolio y casos de estudio
+
+• Optimización de metadatos y estructura semántica
+
+• Mejora progresiva del rendimiento y experiencia de usuario
+  `,
+
+    outcome: `
+• Plataforma profesional desarrollada y desplegada exitosamente
+
+• 60 usuarios registrados en Google Analytics durante el primer mes
+
+• 339 eventos medidos para analizar comportamiento de usuarios
+
+• 64 impresiones orgánicas registradas en Google Search Console
+
+• Lighthouse con 84 Performance y 100 SEO
+
+• Sistema dinámico de portfolio preparado para nuevos casos de estudio
+
+• Infraestructura escalable orientada a posicionamiento orgánico y captación de clientes
+`,
+
+    process: [
+      {
+        title: "Arquitectura",
+        description:
+          "Se definió una estructura modular utilizando Astro y componentes reutilizables para facilitar el mantenimiento y escalabilidad del sitio.",
+      },
+      {
+        title: "Desarrollo",
+        description:
+          "Implementación de páginas, componentes, navegación, portfolio dinámico y sistema de blog optimizado para rendimiento.",
+      },
+      {
+        title: "SEO Técnico",
+        description:
+          "Configuración de sitemap, robots.txt, metadatos, estructura semántica y optimización para motores de búsqueda.",
+      },
+      {
+        title: "Analítica",
+        description:
+          "Integración de Google Analytics 4 y Google Search Console para medir tráfico, indexación y comportamiento de usuarios.",
+      },
+      {
+        title: "Optimización",
+        description:
+          "Mejoras continuas de Core Web Vitals, rendimiento, accesibilidad y experiencia de usuario.",
+      },
+    ],
+
+    before: `
+• Sin presencia profesional centralizada
+
+• Sin portfolio técnico estructurado
+
+• Sin sistema de analítica
+
+• Sin contenido optimizado para SEO
+
+• Sin estrategia de posicionamiento
+
+• Sin arquitectura escalable
+  `,
+
+    after: `
+• Plataforma profesional desarrollada con Astro
+
+• Blog optimizado para posicionamiento orgánico
+
+• Integración de Google Analytics y Search Console
+
+• Arquitectura modular y mantenible
+
+• Portfolio dinámico para casos de estudio
+
+• Optimización SEO técnica implementada
+
+• Base preparada para crecimiento orgánico y captación de clientes
+  `,
+
+    tools: [
+      "Astro",
+      "Tailwind CSS",
+      "TypeScript",
+      "Google Analytics 4",
+      "Google Search Console",
+      "GitHub",
+      "Cloudflare",
+      "SEO Técnico",
+    ],
+
+    testimonial: {
+      text: "La plataforma fue diseñada como un entorno real para aplicar desarrollo web moderno, SEO técnico, analítica y optimización de rendimiento en un proyecto propio.",
+      author: "Proyecto personal",
+    },
+
+    seo: {
+      title: "Caso de estudio NelsonGabriel.com | Desarrollo Web y SEO Técnico",
+
+      description:
+        "Caso de estudio sobre el desarrollo y optimización de NelsonGabriel.com utilizando Astro, SEO técnico, Google Analytics y Search Console.",
+    },
+
+    cta: {
+      text: "Quiero una web optimizada como esta",
+      link: "/#contacto",
+    },
+  },
 ];
