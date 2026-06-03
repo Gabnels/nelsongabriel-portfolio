@@ -1,25 +1,28 @@
 ---
 const phone = "50582069544"; // 👈 tu número real
 const message = encodeURIComponent(
-  "Hola, vi tu sitio web y me interesa una auditoría SEO."
+  "Hola, vi tu sitio web y me interesa una auditoría SEO.",
 );
 const url = `https://wa.me/${phone}?text=${message}`;
 ---
 
-<a 
+<a
   href={url}
   target="_blank"
   rel="noopener noreferrer"
   onclick="trackEvent('whatsapp_click')"
   class="fixed bottom-6 right-6 z-50 group"
 >
-  <div class="flex items-center justify-center md:justify-start
+  <div
+    class="flex items-center justify-center md:justify-start
               bg-green-500 text-black rounded-full shadow-lg
               w-14 h-14 md:w-auto md:h-auto md:px-4 md:py-3
-              hover:scale-105 transition relative">
-
+              hover:scale-105 transition relative"
+  >
     <!-- 🔥 Pulse animation -->
-    <span class="absolute inset-0 rounded-full bg-green-500 opacity-30 animate-ping"></span>
+    <span
+      class="absolute inset-0 rounded-full bg-green-500 opacity-30 animate-ping"
+    ></span>
 
     <!-- Texto (solo desktop) -->
     <span class="hidden md:block text-sm font-semibold relative z-10">
@@ -27,23 +30,14 @@ const url = `https://wa.me/${phone}?text=${message}`;
     </span>
 
     <!-- Icono -->
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 32 32" 
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
       class="w-6 h-6 fill-black relative z-10"
     >
-      <path d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.89.757 5.704 2.192 8.177L0 32l7.632-2.164A15.88 15.88 0 0016 32c8.836 0 16-7.164 16-16.004C32 7.56 24.836.396 16 .396zm0 29.29a13.24 13.24 0 01-6.74-1.85l-.483-.287-4.528 1.283 1.21-4.414-.314-.456a13.206 13.206 0 01-2.027-7.03c0-7.32 5.957-13.277 13.282-13.277 7.323 0 13.28 5.957 13.28 13.277 0 7.324-5.957 13.28-13.28 13.28zm7.27-9.988c-.397-.198-2.35-1.16-2.714-1.29-.365-.133-.63-.198-.897.198-.264.397-1.028 1.29-1.26 1.554-.232.264-.464.297-.86.099-.397-.198-1.676-.617-3.19-1.965-1.178-1.05-1.975-2.35-2.207-2.747-.232-.397-.025-.612.174-.81.18-.18.397-.464.595-.696.198-.232.264-.397.397-.66.133-.264.066-.495-.033-.694-.099-.198-.897-2.163-1.228-2.965-.323-.777-.65-.672-.897-.685l-.764-.013c-.264 0-.694.099-1.06.495-.365.397-1.39 1.36-1.39 3.31s1.423 3.833 1.62 4.098c.198.264 2.8 4.273 6.787 5.993.948.41 1.688.654 2.265.837.95.302 1.814.26 2.497.158.762-.113 2.35-.96 2.682-1.887.33-.926.33-1.72.232-1.887-.099-.165-.363-.264-.76-.463z"/>
+      <path
+        d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.89.757 5.704 2.192 8.177L0 32l7.632-2.164A15.88 15.88 0 0016 32c8.836 0 16-7.164 16-16.004C32 7.56 24.836.396 16 .396zm0 29.29a13.24 13.24 0 01-6.74-1.85l-.483-.287-4.528 1.283 1.21-4.414-.314-.456a13.206 13.206 0 01-2.027-7.03c0-7.32 5.957-13.277 13.282-13.277 7.323 0 13.28 5.957 13.28 13.277 0 7.324-5.957 13.28-13.28 13.28zm7.27-9.988c-.397-.198-2.35-1.16-2.714-1.29-.365-.133-.63-.198-.897.198-.264.397-1.028 1.29-1.26 1.554-.232.264-.464.297-.86.099-.397-.198-1.676-.617-3.19-1.965-1.178-1.05-1.975-2.35-2.207-2.747-.232-.397-.025-.612.174-.81.18-.18.397-.464.595-.696.198-.232.264-.397.397-.66.133-.264.066-.495-.033-.694-.099-.198-.897-2.163-1.228-2.965-.323-.777-.65-.672-.897-.685l-.764-.013c-.264 0-.694.099-1.06.495-.365.397-1.39 1.36-1.39 3.31s1.423 3.833 1.62 4.098c.198.264 2.8 4.273 6.787 5.993.948.41 1.688.654 2.265.837.95.302 1.814.26 2.497.158.762-.113 2.35-.96 2.682-1.887.33-.926.33-1.72.232-1.887-.099-.165-.363-.264-.76-.463z"
+      ></path>
     </svg>
-
   </div>
 </a>
-
-<script>
-  function trackWhatsAppClick() {
-    console.log("WhatsApp click");
-
-    // Guardar en localStorage (simple tracking)
-    const clicks = localStorage.getItem("wa_clicks") || 0;
-    localStorage.setItem("wa_clicks", Number(clicks) + 1);
-  }
-</script>

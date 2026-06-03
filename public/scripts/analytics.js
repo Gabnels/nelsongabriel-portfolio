@@ -1,14 +1,9 @@
-function trackEvent(eventName) {
-  console.log("Event:", eventName);
+function trackEvent(eventName, params = {}) {
+  if (typeof window.gtag === "function") {
+    window.gtag("event", eventName, params);
+  }
 
-  const events = JSON.parse(localStorage.getItem("events") || "[]");
-
-  events.push({
-    event: eventName,
-    date: new Date().toISOString(),
-  });
-
-  localStorage.setItem("events", JSON.stringify(events));
+  console.log("GA4 Event:", eventName, params);
 }
 
 window.trackEvent = trackEvent;
