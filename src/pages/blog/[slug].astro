@@ -54,9 +54,9 @@ const articleSchema = [
       url: "https://nelsongabriel.com",
       image: "https://nelsongabriel.com/authors/nelson.jpg",
       sameAs: [
-        "https://linkedin.com/in/TU-USUARIO",
-        "https://github.com/TU-USUARIO",
-        "https://instagram.com/TU-USUARIO",
+        "https://www.linkedin.com/in/nelsongabrielseo/",
+        "https://github.com/Gabnels",
+        "https://www.upwork.com/freelancers/~01044acc3024ec008c?mp_source=share",
       ],
       jobTitle: "SEO Specialist & Web Developer",
     },
@@ -271,9 +271,10 @@ const articleSchema = [
                 <div class="flex flex-wrap gap-4 mt-8">
                   <!-- LINKEDIN -->
                   <a
-                    href="https://linkedin.com/in/TU-USUARIO"
+                    href="https://www.linkedin.com/in/nelsongabrielseo/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onclick="trackEvent('linkedin_click')"
                     class="px-5 py-3 rounded-xl
            bg-white/5 border border-white/10
            hover:border-[var(--color-primary)]/40
@@ -286,9 +287,10 @@ const articleSchema = [
 
                   <!-- GITHUB -->
                   <a
-                    href="https://github.com/TU-USUARIO"
+                    href="https://github.com/Gabnels"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onclick="trackEvent('github_click')"
                     class="px-5 py-3 rounded-xl
            bg-white/5 border border-white/10
            hover:border-[var(--color-primary)]/40
@@ -299,11 +301,12 @@ const articleSchema = [
                     GitHub
                   </a>
 
-                  <!-- INSTAGRAM -->
+                  <!-- UPWORK -->
                   <a
-                    href="https://instagram.com/TU-USUARIO"
+                    href="https://www.upwork.com/freelancers/~01044acc3024ec008c?mp_source=share"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onclick="trackEvent('upwork_click')"
                     class="px-5 py-3 rounded-xl
            bg-white/5 border border-white/10
            hover:border-[var(--color-primary)]/40
@@ -311,7 +314,7 @@ const articleSchema = [
            transition duration-300
            text-sm text-neutral-300 hover:text-white"
                   >
-                    Instagram
+                    Upwork
                   </a>
                 </div>
               </div>
@@ -334,6 +337,7 @@ const articleSchema = [
         </h3>
         <a
           href="/#contacto"
+          onclick="trackEvent('blog_cta_click')"
           class="inline-block bg-[var(--color-primary)] text-black px-12 py-5 rounded-2xl font-bold text-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(0,255,0,0.2)]"
         >
           Quiero mi Auditoría Gratis
