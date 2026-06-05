@@ -1,0 +1,48 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Gracias por tu solicitud | Nelson Gabriel"
+  description="Solicitud enviada correctamente."
+>
+  <section class="min-h-[70vh] flex items-center justify-center">
+    <div
+      class="max-w-2xl mx-auto text-center
+             border border-neutral-800
+             bg-neutral-900/50
+             backdrop-blur
+             rounded-3xl
+             p-10"
+    >
+      <div class="mb-6 text-6xl">✅</div>
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Solicitud enviada</h1>
+
+      <p class="text-neutral-400 text-lg mb-8">
+        Gracias por contactar. La solicitud fue recibida correctamente. Revisaré
+        la información y responderé lo antes posible.
+      </p>
+
+      <a
+        href="/"
+        class="inline-block
+               bg-[var(--color-primary)]
+               text-black
+               font-semibold
+               px-8 py-4
+               rounded-2xl
+               hover:opacity-90
+               transition"
+      >
+        Volver al inicio
+      </a>
+    </div>
+  </section>
+
+  <script is:inline>
+    if (typeof window.trackEvent === "function") {
+      window.trackEvent("generate_lead");
+    }
+  </script>
+</MainLayout>
