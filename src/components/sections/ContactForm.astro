@@ -9,9 +9,7 @@
     </p>
 
     <form
-      action="https://formspree.io/f/mojywkkb"
-      method="POST"
-      onsubmit="trackEvent('form_submit')"
+      id="contact-form"
       class="space-y-6 bg-neutral-900/60 border border-neutral-800 p-8 rounded-2xl backdrop-blur"
     >
       <!-- Nombre -->
@@ -52,20 +50,63 @@
           required></textarea>
       </div>
 
-      <!-- Redirect -->
-      <input
-        type="hidden"
-        name="_redirect"
-        value="https://nelson-gabriel.com/gracias"
-      />
-
       <!-- Botón -->
       <button
+        id="submit-button"
         type="submit"
         class="w-full bg-[var(--color-primary)] text-black font-semibold py-3 rounded-lg hover:opacity-90 transition"
       >
         Enviar solicitud
       </button>
+
+      <p id="form-error" class="hidden text-red-400 text-sm text-center">
+        Ocurrió un error. Intenta nuevamente.
+      </p>
     </form>
   </div>
 </section>
+
+<script is:inline>
+  const form = document.getElementById("contact-form");
+  const button = document.getElementById("submit-button");
+  const errorMessage = document.getElementById("form-error");
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      button.disabled = true;
+      button.textContent = "Enviando...";
+      errorMessage.classList.add("hidden");
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch("https://formspree.io/f/mojywkkb", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (response.ok) {
+          if (typeof window.trackEvent === "function") {
+            window.trackEvent("form_submit");
+          }
+
+          window.location.href = "/gracias";
+        } else {
+          throw new Error("Error enviando formulario");
+        }
+      } catch (error) {
+        console.error(error);
+
+        button.disabled = false;
+        button.textContent = "Enviar solicitud";
+
+        errorMessage.classList.remove("hidden");
+      }
+    });
+  }
+</script>
