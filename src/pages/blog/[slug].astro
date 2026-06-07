@@ -47,12 +47,12 @@ const articleSchema = [
     "@type": "Article",
     headline: post.data.title,
     description: post.data.excerpt,
-    image: [`https://nelsongabriel.com${post.data.image}`],
+    image: [`https://nelson-gabriel.com${post.data.image}`],
     author: {
       "@type": "Person",
       name: "Nelson Gabriel",
-      url: "https://nelsongabriel.com",
-      image: "https://nelsongabriel.com/authors/nelson.jpg",
+      url: "https://nelson-gabriel.com",
+      image: "https://nelson-gabriel.com/authors/nelson.jpg",
       sameAs: [
         "https://www.linkedin.com/in/nelsongabrielseo/",
         "https://github.com/Gabnels",
@@ -63,7 +63,7 @@ const articleSchema = [
     datePublished: post.data.date.toISOString(),
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://nelsongabriel.com/blog/${post.id}`,
+      "@id": `https://nelson-gabriel.com/blog/${post.id}`,
     },
   },
 ];

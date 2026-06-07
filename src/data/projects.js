@@ -202,7 +202,7 @@ El sitio no tenía tráfico ni estrategia de contenido.
     business: "Nelson Gabriel",
     location: "Nicaragua",
 
-    title: "Desarrollo y optimización SEO de NelsonGabriel.com",
+    title: "Desarrollo y optimización SEO de nelson-gabriel.com",
 
     category: "Desarrollo Web + SEO Técnico",
 
@@ -350,10 +350,11 @@ Además, era necesario crear una base sólida preparada para posicionamiento org
     },
 
     seo: {
-      title: "Caso de estudio NelsonGabriel.com | Desarrollo Web y SEO Técnico",
+      title:
+        "Caso de estudio nelson-gabriel.com | Desarrollo Web y SEO Técnico",
 
       description:
-        "Caso de estudio sobre el desarrollo y optimización de NelsonGabriel.com utilizando Astro, SEO técnico, Google Analytics y Search Console.",
+        "Caso de estudio sobre el desarrollo y optimización de nelson-gabriel.com utilizando Astro, SEO técnico, Google Analytics y Search Console.",
     },
 
     cta: {
