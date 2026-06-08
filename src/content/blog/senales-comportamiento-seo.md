@@ -2,7 +2,7 @@
 title: "Señales de comportamiento del usuario en SEO: guía completa para mejorar posiciones en Google"
 excerpt: "Descubre cómo Google interpreta la interacción de los usuarios y por qué las señales de comportamiento pueden influir en el posicionamiento orgánico."
 category: "SEO"
-image: "/blog/senales-comportamiento-seo.PNG"
+image: "/blog/senales-comportamiento-seo.png"
 date: "2026-06-08"
 ---
 
