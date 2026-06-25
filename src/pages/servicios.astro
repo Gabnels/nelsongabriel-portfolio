@@ -33,347 +33,6 @@ import {
       </p>
     </div>
 
-    <!-- TECH STRIP (CORREGIDO Y SEPARADO) -->
-    <div class="max-w-6xl mx-auto mb-32 px-4">
-      <div
-        class="relative overflow-hidden rounded-[2rem]
-           border border-white/10
-           bg-gradient-to-b from-white/[0.07] to-white/[0.03]
-           backdrop-blur-xl
-           px-6 md:px-10 py-10 md:py-14"
-      >
-        <!-- GLOW -->
-        <div
-          class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.08),transparent_60%)]"
-        >
-        </div>
-
-        <!-- HEADER -->
-        <div class="relative text-center mb-12">
-          <p
-            class="text-xs md:text-sm uppercase tracking-[0.25em]
-               text-[var(--color-primary)]
-               font-semibold mb-4"
-          >
-            Tecnología moderna
-          </p>
-
-          <h2 class="text-2xl md:text-3xl font-bold mb-4">
-            Optimizado para performance,
-            <span class="text-[var(--color-primary)]">SEO</span>
-            y escalabilidad
-          </h2>
-
-          <p
-            class="text-neutral-400 max-w-2xl mx-auto
-               leading-relaxed text-sm md:text-base"
-          >
-            Stack moderno enfocado en velocidad, experiencia de usuario,
-            posicionamiento y arquitectura escalable.
-          </p>
-        </div>
-
-        <!-- LOGOS MARQUEE (CORREGIDO: ELIMINADAS LAS TRIPLES COMILLAS) -->
-        <div class="relative overflow-hidden">
-          <div class="marquee-track">
-            <!-- PRIMERA VUELTA -->
-            <div class="marquee-group">
-              <img src="/logos/astro.svg" alt="Astro" />
-              <img src="/logos/react.svg" alt="React" />
-              <img src="/logos/tailwind.svg" alt="Tailwind" />
-              <img src="/logos/typescript.svg" alt="TypeScript" />
-              <img src="/logos/lighthouse.svg" alt="Lighthouse" />
-              <img src="/logos/google.svg" alt="Google" />
-              <img src="/logos/analytics.svg" alt="Analytics" />
-              <img src="/logos/search-console.svg" alt="Search Console" />
-              <img src="/logos/figma.svg" alt="Figma" />
-              <img src="/logos/vercel.svg" alt="Vercel" />
-            </div>
-
-            <!-- DUPLICADO PARA LOOP -->
-            <div class="marquee-group">
-              <img src="/logos/astro.svg" alt="Astro" />
-              <img src="/logos/react.svg" alt="React" />
-              <img src="/logos/tailwind.svg" alt="Tailwind" />
-              <img src="/logos/typescript.svg" alt="TypeScript" />
-              <img src="/logos/lighthouse.svg" alt="Lighthouse" />
-              <img src="/logos/google.svg" alt="Google" />
-              <img src="/logos/analytics.svg" alt="Analytics" />
-              <img src="/logos/search-console.svg" alt="Search Console" />
-              <img src="/logos/figma.svg" alt="Figma" />
-              <img src="/logos/vercel.svg" alt="Vercel" />
-            </div>
-          </div>
-        </div>
-
-        <style>
-          .marquee-track {
-            display: flex;
-            width: max-content;
-            animation: marquee 30s linear infinite;
-          }
-
-          .marquee-group {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            padding-right: 4rem;
-          }
-
-          .marquee-group img {
-            height: 40px;
-            width: auto;
-            opacity: 0.75;
-            transition: all 0.3s ease;
-            filter: grayscale(100%);
-          }
-
-          .marquee-group img:hover {
-            opacity: 1;
-            filter: grayscale(0%);
-          }
-
-          @keyframes marquee {
-            from {
-              transform: translateX(0);
-            }
-
-            to {
-              transform: translateX(-50%);
-            }
-          }
-
-          @media (max-width: 768px) {
-            .marquee-group {
-              gap: 2.5rem;
-            }
-
-            .marquee-group img {
-              height: 32px;
-            }
-          }
-        </style>
-      </div>
-    </div>
-
-    <!-- PERFORMANCE & RESULTADOS (SEPARADO DE TECH STRIP POR EL MARGEN SUPERIOR) -->
-    <div class="max-w-7xl mx-auto px-4 mb-28">
-      <!-- HEADER -->
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span
-          class="inline-block px-4 py-2 rounded-full
-  bg-[var(--color-primary)]/10
-  text-[var(--color-primary)]
-  text-sm font-medium mb-6"
-        >
-          Rendimiento que genera resultados
-        </span>
-
-        <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-          Una web rápida no es un lujo.
-          <span class="text-[var(--color-primary)]">
-            Es una ventaja competitiva.
-          </span>
-        </h2>
-
-        <p class="text-neutral-400 text-lg leading-relaxed">
-          Cada proyecto está optimizado para mejorar la experiencia del usuario,
-          aumentar conversiones y facilitar el posicionamiento en Google.
-        </p>
-      </div>
-
-      <!-- GRID -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- CARD -->
-        <div
-          class="group relative overflow-hidden rounded-3xl
-  border border-white/10
-  bg-gradient-to-b from-white/[0.05] to-white/[0.02]
-  backdrop-blur-xl
-  p-8
-  hover:border-[var(--color-primary)]/30
-  transition duration-300"
-        >
-          <div
-            class="absolute inset-0 opacity-0 group-hover:opacity-100
-    bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.12),transparent_70%)]
-    transition duration-500"
-          >
-          </div>
-
-          <div class="relative">
-            <p class="text-sm text-neutral-400 mb-3">Velocidad optimizada</p>
-
-            <h3 class="text-4xl font-black text-[var(--color-primary)] mb-4">
-              Carga rápida
-            </h3>
-
-            <p class="text-neutral-400 leading-relaxed">
-              Menos esperas significa más usuarios permaneciendo en el sitio y
-              más oportunidades de conversión.
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD -->
-        <div
-          class="group relative overflow-hidden rounded-3xl
-  border border-white/10
-  bg-gradient-to-b from-white/[0.05] to-white/[0.02]
-  backdrop-blur-xl
-  p-8
-  hover:border-[var(--color-primary)]/30
-  transition duration-300"
-        >
-          <div
-            class="absolute inset-0 opacity-0 group-hover:opacity-100
-    bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.12),transparent_70%)]
-    transition duration-500"
-          >
-          </div>
-
-          <div class="relative">
-            <p class="text-sm text-neutral-400 mb-3">Experiencia de usuario</p>
-
-            <h3 class="text-4xl font-black text-[var(--color-primary)] mb-4">
-              Más conversiones
-            </h3>
-
-            <p class="text-neutral-400 leading-relaxed">
-              Estructuras enfocadas en guiar al visitante hacia llamadas,
-              mensajes, reservas o solicitudes de presupuesto.
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD -->
-        <div
-          class="group relative overflow-hidden rounded-3xl
-  border border-white/10
-  bg-gradient-to-b from-white/[0.05] to-white/[0.02]
-  backdrop-blur-xl
-  p-8
-  hover:border-[var(--color-primary)]/30
-  transition duration-300"
-        >
-          <div
-            class="absolute inset-0 opacity-0 group-hover:opacity-100
-    bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.12),transparent_70%)]
-    transition duration-500"
-          >
-          </div>
-
-          <div class="relative">
-            <p class="text-sm text-neutral-400 mb-3">
-              SEO preparado desde el inicio
-            </p>
-
-            <h3 class="text-4xl font-black text-[var(--color-primary)] mb-4">
-              Más visibilidad
-            </h3>
-
-            <p class="text-neutral-400 leading-relaxed">
-              Arquitectura optimizada para que Google pueda entender, rastrear e
-              indexar correctamente cada página.
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD -->
-        <div
-          class="group relative overflow-hidden rounded-3xl
-  border border-white/10
-  bg-gradient-to-b from-white/[0.05] to-white/[0.02]
-  backdrop-blur-xl
-  p-8
-  hover:border-[var(--color-primary)]/30
-  transition duration-300"
-        >
-          <div
-            class="absolute inset-0 opacity-0 group-hover:opacity-100
-    bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.12),transparent_70%)]
-    transition duration-500"
-          >
-          </div>
-
-          <div class="relative">
-            <p class="text-sm text-neutral-400 mb-3">Adaptabilidad total</p>
-
-            <h3 class="text-4xl font-black text-[var(--color-primary)] mb-4">
-              Mobile First
-            </h3>
-
-            <p class="text-neutral-400 leading-relaxed">
-              Diseños optimizados para móviles, tablets y escritorio desde el
-              primer momento.
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD -->
-        <div
-          class="group relative overflow-hidden rounded-3xl
-  border border-white/10
-  bg-gradient-to-b from-white/[0.05] to-white/[0.02]
-  backdrop-blur-xl
-  p-8
-  hover:border-[var(--color-primary)]/30
-  transition duration-300"
-        >
-          <div
-            class="absolute inset-0 opacity-0 group-hover:opacity-100
-    bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.12),transparent_70%)]
-    transition duration-500"
-          >
-          </div>
-
-          <div class="relative">
-            <p class="text-sm text-neutral-400 mb-3">Tecnología moderna</p>
-
-            <h3 class="text-4xl font-black text-[var(--color-primary)] mb-4">
-              Escalable
-            </h3>
-
-            <p class="text-neutral-400 leading-relaxed">
-              Infraestructura preparada para crecer junto al negocio sin
-              necesidad de reconstruir el proyecto.
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD -->
-        <div
-          class="group relative overflow-hidden rounded-3xl
-  border border-white/10
-  bg-gradient-to-b from-white/[0.05] to-white/[0.02]
-  backdrop-blur-xl
-  p-8
-  hover:border-[var(--color-primary)]/30
-  transition duration-300"
-        >
-          <div
-            class="absolute inset-0 opacity-0 group-hover:opacity-100
-    bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.12),transparent_70%)]
-    transition duration-500"
-          >
-          </div>
-
-          <div class="relative">
-            <p class="text-sm text-neutral-400 mb-3">Optimización continua</p>
-
-            <h3 class="text-4xl font-black text-[var(--color-primary)] mb-4">
-              Preparado para crecer
-            </h3>
-
-            <p class="text-neutral-400 leading-relaxed">
-              Una base sólida para implementar SEO local, contenido, campañas y
-              futuras estrategias de crecimiento.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- SERVICIOS -->
     <div class="max-w-7xl mx-auto mt-10">
       <!-- HEADER -->
@@ -512,158 +171,6 @@ import {
             </p>
           </div>
         </a>
-      </div>
-    </div>
-
-    <!-- PROCESO PREMIUM -->
-    <div class="max-w-7xl mx-auto mt-32">
-      <!-- HEADER -->
-      <div class="text-center max-w-3xl mx-auto mb-20">
-        <span
-          class="inline-block px-4 py-2 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-medium mb-6"
-        >
-          Metodología de trabajo
-        </span>
-
-        <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
-          Un proceso diseñado para
-          <span class="text-[var(--color-primary)]"> generar resultados </span>
-        </h2>
-
-        <p class="text-neutral-400 text-lg leading-relaxed">
-          Cada proyecto sigue una metodología clara y estructurada enfocada en
-          posicionamiento, experiencia de usuario y generación de oportunidades
-          de negocio.
-        </p>
-      </div>
-
-      <!-- PROCESS GRID -->
-      <div class="relative">
-        <!-- LINE -->
-        <div
-          class="hidden lg:block absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-[var(--color-primary)]/20 to-transparent"
-        >
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-          <!-- STEP 1 -->
-          <div
-            class="group relative rounded-3xl border border-white/10 bg-neutral-900/80 backdrop-blur-md p-8 hover:border-[var(--color-primary)]/40 transition duration-500 hover:-translate-y-2"
-          >
-            <div
-              class="absolute inset-0 rounded-3xl bg-[var(--color-primary)]/5 opacity-0 group-hover:opacity-100 transition duration-500"
-            >
-            </div>
-
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center text-[var(--color-primary)] font-black text-lg mb-8"
-              >
-                01
-              </div>
-
-              <h3 class="text-2xl font-bold mb-4">
-                Descubrimiento del negocio
-              </h3>
-
-              <p class="text-neutral-400 leading-relaxed">
-                Analizo objetivos, servicios, competencia y oportunidades para
-                construir una estrategia alineada al crecimiento del negocio.
-              </p>
-            </div>
-          </div>
-
-          <!-- STEP 2 -->
-          <div
-            class="group relative rounded-3xl border border-white/10 bg-neutral-900/80 backdrop-blur-md p-8 hover:border-[var(--color-primary)]/40 transition duration-500 hover:-translate-y-2"
-          >
-            <div
-              class="absolute inset-0 rounded-3xl bg-[var(--color-primary)]/5 opacity-0 group-hover:opacity-100 transition duration-500"
-            >
-            </div>
-
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center text-[var(--color-primary)] font-black text-lg mb-8"
-              >
-                02
-              </div>
-
-              <h3 class="text-2xl font-bold mb-4">Planificación estratégica</h3>
-
-              <p class="text-neutral-400 leading-relaxed">
-                Defino la estructura del sitio, experiencia de usuario, SEO
-                local y arquitectura necesaria para alcanzar los objetivos del
-                proyecto.
-              </p>
-            </div>
-          </div>
-
-          <!-- STEP 3 -->
-          <div
-            class="group relative rounded-3xl border border-white/10 bg-neutral-900/80 backdrop-blur-md p-8 hover:border-[var(--color-primary)]/40 transition duration-500 hover:-translate-y-2"
-          >
-            <div
-              class="absolute inset-0 rounded-3xl bg-[var(--color-primary)]/5 opacity-0 group-hover:opacity-100 transition duration-500"
-            >
-            </div>
-
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center text-[var(--color-primary)] font-black text-lg mb-8"
-              >
-                03
-              </div>
-
-              <h3 class="text-2xl font-bold mb-4">Diseño y desarrollo</h3>
-
-              <p class="text-neutral-400 leading-relaxed">
-                Construyo una experiencia moderna, rápida y optimizada para
-                generar confianza, credibilidad y conversiones.
-              </p>
-            </div>
-          </div>
-
-          <!-- STEP 4 -->
-          <div
-            class="group relative rounded-3xl border border-white/10 bg-neutral-900/80 backdrop-blur-md p-8 hover:border-[var(--color-primary)]/40 transition duration-500 hover:-translate-y-2"
-          >
-            <div
-              class="absolute inset-0 rounded-3xl bg-[var(--color-primary)]/5 opacity-0 group-hover:opacity-100 transition duration-500"
-            >
-            </div>
-
-            <div class="relative z-10">
-              <div
-                class="w-14 h-14 rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center text-[var(--color-primary)] font-black text-lg mb-8"
-              >
-                04
-              </div>
-
-              <h3 class="text-2xl font-bold mb-4">
-                Lanzamiento y optimización
-              </h3>
-
-              <p class="text-neutral-400 leading-relaxed">
-                Publico el proyecto, configuro herramientas de medición y
-                realizo optimizaciones iniciales para maximizar resultados.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TRUST BAR -->
-      <div
-        class="mt-14 rounded-3xl border border-white/10 bg-neutral-900/60 p-8 text-center"
-      >
-        <p class="text-neutral-300 text-lg leading-relaxed max-w-4xl mx-auto">
-          Cada proyecto se desarrolla con enfoque en
-          <span class="text-[var(--color-primary)] font-semibold">
-            posicionamiento, velocidad, experiencia de usuario y conversión
-          </span>, evitando soluciones genéricas y priorizando resultados
-          sostenibles a largo plazo.
-        </p>
       </div>
     </div>
 
@@ -1091,9 +598,671 @@ import {
       </div>
     </div>
 
+    <!-- MANTENIMIENTO WEB -->
+    <div class="max-w-7xl mx-auto mt-32">
+      <!-- HEADER -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span
+          class="inline-block px-4 py-2 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-medium mb-6"
+        >
+          Soporte continuo
+        </span>
+
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          Tu sitio web necesita
+          <span class="text-[var(--color-primary)]">
+            mantenimiento constante
+          </span>
+        </h2>
+
+        <p class="text-neutral-400 text-lg leading-relaxed">
+          Publicar una web es solo el comienzo. Las actualizaciones,
+          optimizaciones y mejoras continuas ayudan a mantener la velocidad,
+          seguridad y capacidad de generar clientes a largo plazo.
+        </p>
+      </div>
+
+      <!-- BENEFITS -->
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <!-- CARD -->
+        <div class="rounded-3xl border border-white/10 bg-neutral-900/80 p-8">
+          <div
+            class="w-12 h-12 rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center mb-6"
+          >
+            <span class="text-[var(--color-primary)] text-xl">⚡</span>
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">Optimización continua</h3>
+
+          <p class="text-neutral-400 leading-relaxed">
+            Ajustes periódicos para mantener velocidad, rendimiento y
+            experiencia de usuario en niveles óptimos.
+          </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="rounded-3xl border border-white/10 bg-neutral-900/80 p-8">
+          <div
+            class="w-12 h-12 rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center mb-6"
+          >
+            <span class="text-[var(--color-primary)] text-xl">🛡️</span>
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">Seguridad y monitoreo</h3>
+
+          <p class="text-neutral-400 leading-relaxed">
+            Supervisión constante, copias de seguridad y corrección de
+            incidencias para proteger tu inversión digital.
+          </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="rounded-3xl border border-white/10 bg-neutral-900/80 p-8">
+          <div
+            class="w-12 h-12 rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center mb-6"
+          >
+            <span class="text-[var(--color-primary)] text-xl">📈</span>
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">Crecimiento progresivo</h3>
+
+          <p class="text-neutral-400 leading-relaxed">
+            Mejoras estratégicas orientadas a incrementar conversiones,
+            posicionamiento y resultados comerciales.
+          </p>
+        </div>
+      </div>
+
+      <!-- PLANS -->
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- ESSENTIAL -->
+        <div
+          class="rounded-3xl border border-neutral-800 bg-neutral-900/70 p-8"
+        >
+          <p class="text-sm text-neutral-400 mb-3">Essential Care</p>
+
+          <h3 class="text-3xl font-bold mb-4">
+            Desde $49
+            <span class="text-lg text-neutral-400">/mes</span>
+          </h3>
+
+          <p class="text-neutral-400 mb-8">
+            Ideal para sitios que necesitan soporte básico y tranquilidad.
+          </p>
+
+          <div class="space-y-4 text-neutral-300">
+            <div>✓ Monitoreo general</div>
+            <div>✓ Copias de seguridad</div>
+            <div>✓ Actualizaciones menores</div>
+            <div>✓ Corrección de errores simples</div>
+            <div>✓ Soporte por email</div>
+          </div>
+        </div>
+
+        <!-- GROWTH -->
+        <div
+          class="relative rounded-3xl border border-[var(--color-primary)]/40 bg-gradient-to-b from-[var(--color-primary)]/10 to-neutral-900 p-8 shadow-[0_0_40px_rgba(34,197,94,0.12)]"
+        >
+          <div
+            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[var(--color-primary)] text-black text-sm font-bold px-4 py-2 rounded-full"
+          >
+            Más solicitado
+          </div>
+
+          <p class="text-sm text-[var(--color-primary)] mb-3">Growth Care</p>
+
+          <h3 class="text-3xl font-bold mb-4">
+            Desde $99
+            <span class="text-lg text-neutral-300">/mes</span>
+          </h3>
+
+          <p class="text-neutral-300 mb-8">
+            Pensado para negocios que desean mejorar continuamente su presencia
+            digital.
+          </p>
+
+          <div class="space-y-4 text-neutral-200">
+            <div>✓ Todo lo incluido en Essential</div>
+            <div>✓ Optimización de velocidad</div>
+            <div>✓ Revisión SEO mensual</div>
+            <div>✓ Ajustes de conversión</div>
+            <div>✓ Soporte prioritario</div>
+            <div>✓ Recomendaciones estratégicas</div>
+          </div>
+        </div>
+
+        <!-- PREMIUM -->
+        <div
+          class="rounded-3xl border border-neutral-800 bg-neutral-900/70 p-8"
+        >
+          <p class="text-sm text-neutral-400 mb-3">Premium Care</p>
+
+          <h3 class="text-3xl font-bold mb-4">
+            Desde $199
+            <span class="text-lg text-neutral-400">/mes</span>
+          </h3>
+
+          <p class="text-neutral-400 mb-8">
+            Para empresas que desean evolución constante y soporte avanzado.
+          </p>
+
+          <div class="space-y-4 text-neutral-300">
+            <div>✓ Todo lo incluido en Growth</div>
+            <div>✓ Mejoras UX continuas</div>
+            <div>✓ Auditorías SEO periódicas</div>
+            <div>✓ Implementación de mejoras</div>
+            <div>✓ Consultoría estratégica</div>
+            <div>✓ Atención prioritaria avanzada</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOT NOTE -->
+      <div class="text-center mt-10">
+        <p class="text-sm text-neutral-500 max-w-3xl mx-auto">
+          El mantenimiento es opcional. Cada negocio tiene necesidades
+          diferentes y los planes pueden ajustarse según objetivos, tamaño del
+          proyecto y nivel de soporte requerido.
+        </p>
+      </div>
+    </div>
+
+    <!-- PROCESO PREMIUM -->
+    <div class="max-w-7xl mx-auto mt-32">
+      <!-- HEADER -->
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <span
+          class="inline-block px-4 py-2 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-medium mb-6"
+        >
+          Metodología de trabajo
+        </span>
+
+        <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+          Un proceso diseñado para
+          <span class="text-[var(--color-primary)]"> generar resultados </span>
+        </h2>
+
+        <p class="text-neutral-400 text-lg leading-relaxed">
+          Cada proyecto sigue una metodología clara y estructurada enfocada en
+          posicionamiento, experiencia de usuario y generación de oportunidades
+          de negocio.
+        </p>
+      </div>
+
+      <!-- PROCESS GRID -->
+      <div class="relative">
+        <!-- LINE -->
+        <div
+          class="hidden lg:block absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-[var(--color-primary)]/20 to-transparent"
+        >
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+          <!-- STEP 1 -->
+          <div
+            class="group relative rounded-3xl border border-white/10 bg-neutral-900/80 backdrop-blur-md p-8 hover:border-[var(--color-primary)]/40 transition duration-500 hover:-translate-y-2"
+          >
+            <div
+              class="absolute inset-0 rounded-3xl bg-[var(--color-primary)]/5 opacity-0 group-hover:opacity-100 transition duration-500"
+            >
+            </div>
+
+            <div class="relative z-10">
+              <div
+                class="w-14 h-14 rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center text-[var(--color-primary)] font-black text-lg mb-8"
+              >
+                01
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">
+                Descubrimiento del negocio
+              </h3>
+
+              <p class="text-neutral-400 leading-relaxed">
+                Analizo objetivos, servicios, competencia y oportunidades para
+                construir una estrategia alineada al crecimiento del negocio.
+              </p>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div
+            class="group relative rounded-3xl border border-white/10 bg-neutral-900/80 backdrop-blur-md p-8 hover:border-[var(--color-primary)]/40 transition duration-500 hover:-translate-y-2"
+          >
+            <div
+              class="absolute inset-0 rounded-3xl bg-[var(--color-primary)]/5 opacity-0 group-hover:opacity-100 transition duration-500"
+            >
+            </div>
+
+            <div class="relative z-10">
+              <div
+                class="w-14 h-14 rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center text-[var(--color-primary)] font-black text-lg mb-8"
+              >
+                02
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">Planificación estratégica</h3>
+
+              <p class="text-neutral-400 leading-relaxed">
+                Defino la estructura del sitio, experiencia de usuario, SEO
+                local y arquitectura necesaria para alcanzar los objetivos del
+                proyecto.
+              </p>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div
+            class="group relative rounded-3xl border border-white/10 bg-neutral-900/80 backdrop-blur-md p-8 hover:border-[var(--color-primary)]/40 transition duration-500 hover:-translate-y-2"
+          >
+            <div
+              class="absolute inset-0 rounded-3xl bg-[var(--color-primary)]/5 opacity-0 group-hover:opacity-100 transition duration-500"
+            >
+            </div>
+
+            <div class="relative z-10">
+              <div
+                class="w-14 h-14 rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center text-[var(--color-primary)] font-black text-lg mb-8"
+              >
+                03
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">Diseño y desarrollo</h3>
+
+              <p class="text-neutral-400 leading-relaxed">
+                Construyo una experiencia moderna, rápida y optimizada para
+                generar confianza, credibilidad y conversiones.
+              </p>
+            </div>
+          </div>
+
+          <!-- STEP 4 -->
+          <div
+            class="group relative rounded-3xl border border-white/10 bg-neutral-900/80 backdrop-blur-md p-8 hover:border-[var(--color-primary)]/40 transition duration-500 hover:-translate-y-2"
+          >
+            <div
+              class="absolute inset-0 rounded-3xl bg-[var(--color-primary)]/5 opacity-0 group-hover:opacity-100 transition duration-500"
+            >
+            </div>
+
+            <div class="relative z-10">
+              <div
+                class="w-14 h-14 rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center text-[var(--color-primary)] font-black text-lg mb-8"
+              >
+                04
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">
+                Lanzamiento y optimización
+              </h3>
+
+              <p class="text-neutral-400 leading-relaxed">
+                Publico el proyecto, configuro herramientas de medición y
+                realizo optimizaciones iniciales para maximizar resultados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRUST BAR -->
+      <div
+        class="mt-14 rounded-3xl border border-white/10 bg-neutral-900/60 p-8 text-center"
+      >
+        <p class="text-neutral-300 text-lg leading-relaxed max-w-4xl mx-auto">
+          Cada proyecto se desarrolla con enfoque en
+          <span class="text-[var(--color-primary)] font-semibold">
+            posicionamiento, velocidad, experiencia de usuario y conversión
+          </span>, evitando soluciones genéricas y priorizando resultados
+          sostenibles a largo plazo.
+        </p>
+      </div>
+    </div>
+
+    <!-- PERFORMANCE & RESULTADOS (CORREGIDO: AGREGADO mt-32 PARA SEPARAR DE LA SECCIÓN ANTERIOR) -->
+    <div class="max-w-7xl mx-auto px-4 mt-32 mb-28">
+      <!-- HEADER -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span
+          class="inline-block px-4 py-2 rounded-full
+  bg-[var(--color-primary)]/10
+  text-[var(--color-primary)]
+  text-sm font-medium mb-6"
+        >
+          Rendimiento que genera resultados
+        </span>
+
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          Una web rápida no es un lujo.
+          <span class="text-[var(--color-primary)]">
+            Es una ventaja competitiva.
+          </span>
+        </h2>
+
+        <p class="text-neutral-400 text-lg leading-relaxed">
+          Cada proyecto está optimizado para mejorar la experiencia del usuario,
+          aumentar conversiones y facilitar el posicionamiento en Google.
+        </p>
+      </div>
+
+      <!-- GRID -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- CARD -->
+        <div
+          class="group relative overflow-hidden rounded-3xl
+  border border-white/10
+  bg-gradient-to-b from-white/[0.05] to-white/[0.02]
+  backdrop-blur-xl
+  p-8
+  hover:border-[var(--color-primary)]/30
+  transition duration-300"
+        >
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100
+    bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.12),transparent_70%)]
+    transition duration-500"
+          >
+          </div>
+
+          <div class="relative">
+            <p class="text-sm text-neutral-400 mb-3">Velocidad optimizada</p>
+
+            <h3 class="text-4xl font-black text-[var(--color-primary)] mb-4">
+              Carga rápida
+            </h3>
+
+            <p class="text-neutral-400 leading-relaxed">
+              Menos esperas significa más usuarios permaneciendo en el sitio y
+              más oportunidades de conversión.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div
+          class="group relative overflow-hidden rounded-3xl
+  border border-white/10
+  bg-gradient-to-b from-white/[0.05] to-white/[0.02]
+  backdrop-blur-xl
+  p-8
+  hover:border-[var(--color-primary)]/30
+  transition duration-300"
+        >
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100
+    bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.12),transparent_70%)]
+    transition duration-500"
+          >
+          </div>
+
+          <div class="relative">
+            <p class="text-sm text-neutral-400 mb-3">Experiencia de usuario</p>
+
+            <h3 class="text-4xl font-black text-[var(--color-primary)] mb-4">
+              Más conversiones
+            </h3>
+
+            <p class="text-neutral-400 leading-relaxed">
+              Estructuras enfocadas en guiar al visitante hacia llamadas,
+              mensajes, reservas o solicitudes de presupuesto.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div
+          class="group relative overflow-hidden rounded-3xl
+  border border-white/10
+  bg-gradient-to-b from-white/[0.05] to-white/[0.02]
+  backdrop-blur-xl
+  p-8
+  hover:border-[var(--color-primary)]/30
+  transition duration-300"
+        >
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100
+    bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.12),transparent_70%)]
+    transition duration-500"
+          >
+          </div>
+
+          <div class="relative">
+            <p class="text-sm text-neutral-400 mb-3">
+              SEO preparado desde el inicio
+            </p>
+
+            <h3 class="text-4xl font-black text-[var(--color-primary)] mb-4">
+              Más visibilidad
+            </h3>
+
+            <p class="text-neutral-400 leading-relaxed">
+              Arquitectura optimizada para que Google pueda entender, rastrear e
+              indexar correctamente cada página.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div
+          class="group relative overflow-hidden rounded-3xl
+  border border-white/10
+  bg-gradient-to-b from-white/[0.05] to-white/[0.02]
+  backdrop-blur-xl
+  p-8
+  hover:border-[var(--color-primary)]/30
+  transition duration-300"
+        >
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100
+    bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.12),transparent_70%)]
+    transition duration-500"
+          >
+          </div>
+
+          <div class="relative">
+            <p class="text-sm text-neutral-400 mb-3">Adaptabilidad total</p>
+
+            <h3 class="text-4xl font-black text-[var(--color-primary)] mb-4">
+              Mobile First
+            </h3>
+
+            <p class="text-neutral-400 leading-relaxed">
+              Diseños optimizados para móviles, tablets y escritorio desde el
+              primer momento.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div
+          class="group relative overflow-hidden rounded-3xl
+  border border-white/10
+  bg-gradient-to-b from-white/[0.05] to-white/[0.02]
+  backdrop-blur-xl
+  p-8
+  hover:border-[var(--color-primary)]/30
+  transition duration-300"
+        >
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100
+    bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.12),transparent_70%)]
+    transition duration-500"
+          >
+          </div>
+
+          <div class="relative">
+            <p class="text-sm text-neutral-400 mb-3">Tecnología moderna</p>
+
+            <h3 class="text-4xl font-black text-[var(--color-primary)] mb-4">
+              Escalable
+            </h3>
+
+            <p class="text-neutral-400 leading-relaxed">
+              Infraestructura preparada para crecer junto al negocio sin
+              necesidad de reconstruir el proyecto.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div
+          class="group relative overflow-hidden rounded-3xl
+  border border-white/10
+  bg-gradient-to-b from-white/[0.05] to-white/[0.02]
+  backdrop-blur-xl
+  p-8
+  hover:border-[var(--color-primary)]/30
+  transition duration-300"
+        >
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100
+    bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.12),transparent_70%)]
+    transition duration-500"
+          >
+          </div>
+
+          <div class="relative">
+            <p class="text-sm text-neutral-400 mb-3">Optimización continua</p>
+
+            <h3 class="text-4xl font-black text-[var(--color-primary)] mb-4">
+              Preparado para crecer
+            </h3>
+
+            <p class="text-neutral-400 leading-relaxed">
+              Una base sólida para implementar SEO local, contenido, campañas y
+              futuras estrategias de crecimiento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECH STRIP (REUBICADO ANTES DEL CTA FINAL Y CON ESPACIADO CORRECTO) -->
+    <div class="max-w-6xl mx-auto mt-32 mb-32 px-4">
+      <div
+        class="relative overflow-hidden rounded-[2rem]
+           border border-white/10
+           bg-gradient-to-b from-white/[0.07] to-white/[0.03]
+           backdrop-blur-xl
+           px-6 md:px-10 py-10 md:py-14"
+      >
+        <!-- GLOW -->
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.08),transparent_60%)]"
+        >
+        </div>
+
+        <!-- HEADER -->
+        <div class="relative text-center mb-12">
+          <p
+            class="text-xs md:text-sm uppercase tracking-[0.25em]
+               text-[var(--color-primary)]
+               font-semibold mb-4"
+          >
+            Tecnología moderna
+          </p>
+
+          <h2 class="text-2xl md:text-3xl font-bold mb-4">
+            Optimizado para performance,
+            <span class="text-[var(--color-primary)]">SEO</span>
+            y escalabilidad
+          </h2>
+
+          <p
+            class="text-neutral-400 max-w-2xl mx-auto
+               leading-relaxed text-sm md:text-base"
+          >
+            Stack moderno enfocado en velocidad, experiencia de usuario,
+            posicionamiento y arquitectura escalable.
+          </p>
+        </div>
+
+        <!-- LOGOS MARQUEE -->
+        <div class="relative overflow-hidden">
+          <div class="marquee-track">
+            <!-- PRIMERA VUELTA -->
+            <div class="marquee-group">
+              <img src="/logos/astro.svg" alt="Astro" />
+              <img src="/logos/react.svg" alt="React" />
+              <img src="/logos/tailwind.svg" alt="Tailwind" />
+              <img src="/logos/typescript.svg" alt="TypeScript" />
+              <img src="/logos/lighthouse.svg" alt="Lighthouse" />
+              <img src="/logos/google.svg" alt="Google" />
+              <img src="/logos/analytics.svg" alt="Analytics" />
+              <img src="/logos/search-console.svg" alt="Search Console" />
+              <img src="/logos/figma.svg" alt="Figma" />
+              <img src="/logos/vercel.svg" alt="Vercel" />
+            </div>
+
+            <!-- DUPLICADO PARA LOOP -->
+            <div class="marquee-group">
+              <img src="/logos/astro.svg" alt="Astro" />
+              <img src="/logos/react.svg" alt="React" />
+              <img src="/logos/tailwind.svg" alt="Tailwind" />
+              <img src="/logos/typescript.svg" alt="TypeScript" />
+              <img src="/logos/lighthouse.svg" alt="Lighthouse" />
+              <img src="/logos/google.svg" alt="Google" />
+              <img src="/logos/analytics.svg" alt="Analytics" />
+              <img src="/logos/search-console.svg" alt="Search Console" />
+              <img src="/logos/figma.svg" alt="Figma" />
+              <img src="/logos/vercel.svg" alt="Vercel" />
+            </div>
+          </div>
+        </div>
+
+        <style>
+          .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 30s linear infinite;
+          }
+
+          .marquee-group {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            padding-right: 4rem;
+          }
+
+          .marquee-group img {
+            height: 40px;
+            width: auto;
+            opacity: 0.75;
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+          }
+
+          .marquee-group img:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+          }
+
+          @keyframes marquee {
+            from {
+              transform: translateX(0);
+            }
+
+            to {
+              transform: translateX(-50%);
+            }
+          }
+
+          @media (max-width: 768px) {
+            .marquee-group {
+              gap: 2.5rem;
+            }
+
+            .marquee-group img {
+              height: 32px;
+            }
+          }
+        </style>
+      </div>
+    </div>
+
     <!-- CTA FINAL -->
     <div
-      class="max-w-5xl mx-auto mt-28 p-10 rounded-3xl bg-gradient-to-r from-neutral-900 to-neutral-800 border border-neutral-700 text-center"
+      class="max-w-5xl mx-auto mt-10 p-10 rounded-3xl bg-gradient-to-r from-neutral-900 to-neutral-800 border border-neutral-700 text-center"
     >
       <p
         class="text-sm uppercase tracking-widest text-[var(--color-primary)] mb-3"
