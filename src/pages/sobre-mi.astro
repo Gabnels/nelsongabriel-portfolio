@@ -1,0 +1,232 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import {
+  MessageCircle,
+  Users,
+  Target,
+  TrendingUp,
+  CheckCircle2,
+  Search,
+  ArrowRight,
+} from "@lucide/astro";
+---
+
+<MainLayout title="Sobre mí | Nelson Gabriel - SEO Local y Marketing">
+  <section class="py-20 md:py-32 px-4">
+    <div class="max-w-4xl mx-auto">
+      <!-- HERO / TÍTULO -->
+      <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+        <span
+          class="inline-block px-4 py-2 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-medium mb-6"
+        >
+          Conóceme
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
+          Me dedico a hacer que los negocios locales <span
+            class="text-[var(--color-primary)]"
+            >crezcan sin depender de anuncios</span
+          >
+        </h1>
+        <p class="text-neutral-400 text-lg leading-relaxed max-w-2xl mx-auto">
+          Detrás de las estrategias de SEO y el diseño web, hay una persona
+          apasionada por ver a los emprendedores ganar clientes reales.
+        </p>
+      </div>
+
+      <!-- SECCIÓN 1: QUIÉN SOY (FOTO + TEXTO) - ESTRUCTURA DE FOTO INTACTADA -->
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+        <!-- Left: Imagen -->
+        <div class="relative flex justify-center">
+          <div
+            class="w-64 md:w-80 h-80 md:h-[28rem] rounded-[2rem]
+                   border border-neutral-800
+                   bg-neutral-900
+                   flex items-center justify-center
+                   shadow-[0_0_50px_rgba(34,197,94,0.1)]"
+          >
+            <img
+              src="/authors/gabnels-author.jpg"
+              alt="Nelson Gabriel - Especialista en SEO Local"
+              width="320"
+              height="448"
+              class="w-full h-full object-cover object-[center_20%] rounded-[2rem]"
+            />
+          </div>
+
+          <!-- Decoración flotante -->
+          <div
+            class="absolute -bottom-4 -right-4 bg-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 rounded-full p-3 backdrop-blur"
+          >
+            <CheckCircle2 class="w-8 h-8 text-[var(--color-primary)]" />
+          </div>
+        </div>
+
+        <!-- Right: Texto (MEJORADO EL COPY) -->
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Hola, soy Nelson Gabriel</h2>
+          <p class="text-neutral-400 leading-relaxed text-lg mb-4">
+            Soy Nelson Gabriel, y mi trabajo es hacer que dueños de negocios
+            como tú puedan dormir tranquilos. No solo creo páginas web;
+            construyo <strong class="text-white"
+              >máquinas de captación de clientes que funcionan solas</strong
+            >, basadas en SEO y Google Maps.
+          </p>
+          <p class="text-neutral-400 leading-relaxed text-lg mb-6">
+            Dejé el lenguaje técnico de lado para enfocarme en lo único que
+            importa: <strong class="text-white"
+              >estrategias que se traducen en llamadas, reservas y ventas.</strong
+            >
+          </p>
+
+          <div class="flex flex-wrap gap-3 mb-6">
+            <span
+              class="px-4 py-2 rounded-full bg-neutral-800 text-sm text-neutral-300 border border-neutral-700"
+              >📍 SEO Local</span
+            >
+            <span
+              class="px-4 py-2 rounded-full bg-neutral-800 text-sm text-neutral-300 border border-neutral-700"
+              >💻 Desarrollo Web</span
+            >
+            <span
+              class="px-4 py-2 rounded-full bg-neutral-800 text-sm text-neutral-300 border border-neutral-700"
+              >📈 Estrategia de Crecimiento</span
+            >
+          </div>
+
+          <!-- 👇 NUEVO: ENLACE AL PORTFOLIO 👇 -->
+          <a
+            href="/portfolio"
+            class="inline-flex items-center gap-2 text-[var(--color-primary)] font-medium hover:underline transition group"
+          >
+            Ver proyectos anteriores
+            <ArrowRight
+              class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- SECCIÓN 2: MI PROPÓSITO / MISIÓN (AGREGADO TOQUE PERSONAL) -->
+      <div
+        class="bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 rounded-3xl p-10 md:p-16 mb-12 text-center"
+      >
+        <div class="max-w-3xl mx-auto">
+          <div
+            class="w-16 h-16 rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center mx-auto mb-6"
+          >
+            <Target class="w-8 h-8 text-[var(--color-primary)]" />
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Mi misión es simple
+          </h2>
+          <p class="text-neutral-400 text-lg leading-relaxed">
+            Que cada dueño de negocio en cualquier ciudad pueda dormir tranquilo
+            sabiendo que su negocio es <strong class="text-white"
+              >fácil de encontrar, fácil de elegir y fácil de contactar</strong
+            > en Google.
+          </p>
+        </div>
+      </div>
+
+      <!-- 👇 NUEVO: DETALLE PERSONAL Y DE CONFIANZA 👇 -->
+      <div class="text-center max-w-2xl mx-auto mb-24">
+        <div
+          class="inline-block p-6 rounded-3xl border border-neutral-800 bg-neutral-900/30 backdrop-blur"
+        >
+          <p class="text-neutral-300 leading-relaxed text-base">
+            <span class="text-[var(--color-primary)] font-bold"
+              >Un poco sobre mí:</span
+            >
+            Fuera del trabajo soy un apasionado del cine y la buena comida, y en mis
+            ratos libres me encanta leer y escribir garabatos de ficción, y esa misma
+            pasión por los detalles es la que pongo al servicio de cada proyecto.
+            Si hablamos, te prometo un trato honesto y estrategias que realmente funcionan
+            para tu negocio.
+          </p>
+        </div>
+      </div>
+
+      <!-- SECCIÓN 3: VALORES / CÓMO TRABAJO -->
+      <div class="mb-24">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Cómo ayudo a tus clientes a encontrarte
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="p-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 hover:border-[var(--color-primary)]/30 transition duration-300"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-[var(--color-primary)]/10 flex items-center justify-center mb-4 text-[var(--color-primary)]"
+            >
+              <Search size={24} />
+            </div>
+            <h3 class="text-xl font-bold mb-2">Apareces en Google</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+              No importa si es web o Maps. Mi prioridad es que te encuentren
+              cuando te necesitan.
+            </p>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 hover:border-[var(--color-primary)]/30 transition duration-300"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-[var(--color-primary)]/10 flex items-center justify-center mb-4 text-[var(--color-primary)]"
+            >
+              <Users size={24} />
+            </div>
+            <h3 class="text-xl font-bold mb-2">Te entienden</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+              Tu sitio web y contenido están diseñados para hablarle a tu
+              cliente ideal, no a los robots de Google.
+            </p>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 hover:border-[var(--color-primary)]/30 transition duration-300"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-[var(--color-primary)]/10 flex items-center justify-center mb-4 text-[var(--color-primary)]"
+            >
+              <TrendingUp size={24} />
+            </div>
+            <h3 class="text-xl font-bold mb-2">Te convierten</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+              El objetivo final: que cada visita a tu sitio se convierta en una
+              oportunidad real de negocio.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA FINAL DE LA PÁGINA (TÍTULO MEJORADO) -->
+      <div
+        class="text-center p-10 md:p-14 rounded-3xl bg-gradient-to-r from-[var(--color-primary)]/10 to-neutral-900 border border-[var(--color-primary)]/20"
+      >
+        <h2 class="text-3xl font-bold mb-4">
+          Tu negocio merece clientes. Empecemos hoy.
+        </h2>
+        <p class="text-neutral-400 text-lg mb-8 max-w-xl mx-auto">
+          No esperes más. Agendemos una llamada para revisar cómo está tu
+          negocio hoy y cómo podemos mejorarlo.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/#contacto"
+            class="inline-flex items-center justify-center bg-[var(--color-primary)] text-black font-bold px-8 py-4 rounded-full hover:scale-105 transition duration-300 text-lg"
+          >
+            <MessageCircle class="w-5 h-5 mr-2" />
+            Quiero mi auditoría gratuita
+          </a>
+          <a
+            href="/servicios"
+            class="inline-flex items-center justify-center border border-white/20 text-white px-8 py-4 rounded-full hover:bg-white/10 transition duration-300 text-lg"
+          >
+            Ver servicios
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
