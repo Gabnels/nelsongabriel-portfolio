@@ -1,6 +1,6 @@
 ---
-title: "7 señales negativas de usuario que pueden hundir tu SEO (y cómo solucionarlas)"
-excerpt: "Descubre qué comportamientos de los usuarios indican problemas graves en tu web, cómo detectarlos con herramientas gratis y por qué Google los tiene en cuenta (aunque no lo confiese)."
+title: "7 señales negativas de usuario que pueden hundir tu SEO en 2026 (y cómo solucionarlas)"
+excerpt: "¿Tu web recibe visitas pero los usuarios huyen? Descubre las 7 señales negativas que afectan tu SEO en 2026 y cómo solucionarlas con herramientas gratuitas."
 category: "SEO"
 image: "/blog/senales-negativas-usuario-seo.png"
 date: "2026-06-08"
