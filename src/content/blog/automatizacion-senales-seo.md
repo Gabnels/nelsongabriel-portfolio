@@ -26,7 +26,7 @@ Si todavía no tienes claro qué son las señales de comportamiento o por qué i
 
 También puede ser útil revisar nuestro artículo sobre **[señales negativas de usuario que pueden hundir tu SEO](/blog/senales-negativas-usuario-seo)**, donde profundizamos en los problemas más comunes y cómo identificarlos.
 
-Y si el problema no son las señales, sino que tu web recibe visitas pero no convierte, te recomiendo leer **[por qué tu web recibe visitas pero no clientes](/blog/visitas-pero-no-clientes)**.
+Y si el problema no son las señales, sino que tu web recibe visitas pero no convierte, te recomiendo leer **[por qué tu web recibe visitas pero no clientes](/blog/por-que-tu-web-no-convierte)**.
 
 En este artículo, en cambio, nos centraremos en un enfoque más práctico:
 
@@ -365,7 +365,7 @@ Este artículo forma parte de una serie dedicada a las señales de comportamient
 
 - **[Señales de comportamiento del usuario en SEO: guía completa](/blog/senales-comportamiento-seo)** — el artículo pilar del clúster, donde explicamos qué son y por qué importan.
 - **[7 señales negativas de usuario que pueden hundir tu SEO](/blog/senales-negativas-usuario-seo)** — aprende a detectar los problemas que afectan tu rendimiento orgánico.
-- **[Por qué tu web recibe visitas pero no clientes](/blog/visitas-pero-no-clientes)** — si el tráfico no se convierte, descubre qué está fallando.
+- **[Por qué tu web recibe visitas pero no clientes](/blog/por-que-tu-web-no-convierte)** — si el tráfico no se convierte, descubre qué está fallando.
 
 **Próximamente:**
 
