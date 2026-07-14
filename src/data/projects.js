@@ -362,4 +362,135 @@ Además, era necesario crear una base sólida preparada para posicionamiento org
       link: "/#contacto",
     },
   },
+
+  {
+    slug: "ilovemypet-veterinaria",
+    business: "I Love My Pet",
+    location: "Managua, Nicaragua",
+    title: "Desarrollo Web para Clínica Veterinaria",
+    category: "Desarrollo Web + SEO Local",
+
+    image: "/images/fachada.png",
+
+    description:
+      "Diseño y desarrollo de sitio web institucional para clínica veterinaria en Managua, con enfoque en branding cálido y experiencia de usuario.",
+    result: "Proyecto real desplegado",
+
+    metrics: [
+      { label: "Rendimiento", value: "98" },
+      { label: "SEO", value: "100" },
+      { label: "SEO Local", value: "Optimizado" },
+    ],
+
+    problem: `
+La clínica veterinaria contaba con presencia digital limitada y no transmitía visualmente su calidez y compromiso con los animales, lo que afectaba la confianza de nuevos clientes potenciales en la zona de Managua.
+    `,
+
+    solution: `
+• Branding completo con paleta de colores cálida (Teal y Crema)
+
+• Desarrollo frontend utilizando Astro y Tailwind CSS
+
+• Diseño responsive para móviles, tablets y escritorio
+
+• Menú hamburguesa funcional y navegación fluida
+
+• Sección de servicios con iconografía profesional (Phosphor Icons)
+
+• Blog dinámico con artículos de ejemplo y sidebar informativo
+
+• Sistema de contacto con formulario integrado
+
+• Optimización de imágenes para carga rápida
+
+• Despliegue profesional en Vercel
+    `,
+
+    outcome: `
+• Sitio web institucional moderno y 100% responsive
+
+• Branding coherente que transmite confianza y profesionalismo
+
+• Experiencia de usuario optimizada en todos los dispositivos
+
+• Rendimiento de 98 puntos en Lighthouse
+
+• Base sólida preparada para SEO local y crecimiento futuro
+
+• Caso real listo para mostrar a nuevos clientes
+    `,
+
+    process: [
+      {
+        title: "Branding y Diseño",
+        description:
+          "Se definió una paleta de colores cálida y moderna (Teal, Crema y Naranja) y una arquitectura de contenido que refleja los valores de la clínica.",
+      },
+      {
+        title: "Desarrollo Frontend",
+        description:
+          "Implementación completa con Astro y Tailwind CSS, creando un sitio súper rápido y mantenible con componentes reutilizables.",
+      },
+      {
+        title: "Optimización y Responsive",
+        description:
+          "Adaptación total para celulares, tablets y escritorio, con menú hamburguesa integrado y fluidez en la navegación.",
+      },
+      {
+        title: "Despliegue",
+        description:
+          "El proyecto fue desplegado en Vercel con CDN global, garantizando tiempos de carga ultrarrápidos y alta disponibilidad.",
+      },
+    ],
+
+    before: `
+• Sin presencia web profesional
+
+• Branding visual inconsistente
+
+• Sin sistema de reservas o contacto
+
+• No adaptable a dispositivos móviles
+    `,
+
+    after: `
+• Sitio web institucional y profesional
+
+• Branding cálido y coherente
+
+• Formulario de contacto funcional
+
+• 100% responsive (celular, tablet, escritorio)
+
+• Desplegado en Vercel con rendimiento de 98/100
+    `,
+
+    tools: [
+      "Astro",
+      "Tailwind CSS",
+      "Phosphor Icons",
+      "Google Fonts",
+      "Lucide Icons",
+      "GitHub",
+      "Vercel",
+      "SEO Local",
+    ],
+
+    testimonial: {
+      text: "El sitio refleja perfectamente la calidez de nuestra clínica. Ahora nuestros clientes pueden conocernos y agendar citas desde cualquier lugar.",
+      author: "Cliente real (Proyecto I Love My Pet)",
+    },
+
+    seo: {
+      title:
+        "Caso de éxito: Desarrollo Web para Clínica Veterinaria | I Love My Pet",
+      description:
+        "Diseño y desarrollo de un sitio web institucional moderno para clínica veterinaria en Managua. Branding, responsive, SEO local y despliegue en Vercel.",
+    },
+
+    cta: {
+      text: "Quiero una web profesional para mi negocio",
+      link: "/#contacto",
+    },
+  },
 ];
