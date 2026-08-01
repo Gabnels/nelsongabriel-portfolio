@@ -15,6 +15,7 @@
     "vite": "^7.1.0"
   },
   "dependencies": {
+    "@astrojs/partytown": "^2.1.7",
     "@astrojs/sitemap": "^3.7.2",
     "@lucide/astro": "^1.14.0",
     "@tailwindcss/typography": "^0.5.19",

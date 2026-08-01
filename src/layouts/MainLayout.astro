@@ -60,10 +60,11 @@ const {
       )
     }
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QLXMGNR45"
-    ></script>
-    <script is:inline>
+    <!-- Google tag (gtag.js) vía Partytown -->
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-7QLXMGNR45"></script>
+    <script type="text/partytown" is:inline>
       window.dataLayer = window.dataLayer || [];
 
       window.gtag = function () {
@@ -71,7 +72,6 @@ const {
       };
 
       window.gtag("js", new Date());
-
       window.gtag("config", "G-7QLXMGNR45");
     </script>
   </head>
