@@ -1,19 +1,22 @@
 ---
-// Componente AOS optimizado
+// AOS optimizado a prueba de bundlers
 ---
 
 <script>
-  // Esperamos a que el navegador termine de cargar el contenido principal
-  window.addEventListener("load", async () => {
-    // Importamos dinámicamente AOS y su CSS
-    // Esto evita que Astro coloque el CSS en el <head> bloqueando el renderizado
-    const AOS = (await import("aos")).default;
-    await import("aos/dist/aos.css");
+  window.addEventListener("load", () => {
+    // 1. Inyectamos el CSS dinámicamente desde un CDN
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "https://unpkg.com/aos@next/dist/aos.css";
+    document.head.appendChild(link);
 
-    // Inicializamos
-    AOS.init({
-      duration: 800,
-      once: true,
+    // 2. Importamos el JS
+    import("aos").then((module) => {
+      const AOS = module.default;
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
     });
   });
 </script>
