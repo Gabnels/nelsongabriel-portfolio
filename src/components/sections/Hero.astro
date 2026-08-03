@@ -1,8 +1,4 @@
----
-
----
-
-<section data-aos="fade-up" class="relative py-16 md:py-24 overflow-hidden">
+<section class="hero-entrada-segura relative py-16 md:py-24 overflow-hidden">
   <!-- Glow Background -->
   <div class="absolute inset-0 -z-10 overflow-hidden">
     <div
@@ -164,9 +160,25 @@
     </div>
   </div>
 
-  <!-- Lottie Script -->
+  <!-- Lottie Script (Partytown) -->
   <script
     type="text/partytown"
     src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
   ></script>
 </section>
+
+<!-- Animación CSS nativa y segura para el Hero -->
+<style>
+  .hero-entrada-segura {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUpNativo 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeUpNativo {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
