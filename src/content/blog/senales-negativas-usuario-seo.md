@@ -2,7 +2,7 @@
 title: "7 señales negativas de usuario que pueden hundir tu SEO en 2026 (y cómo solucionarlas)"
 excerpt: "¿Tu web recibe visitas pero los usuarios huyen? Descubre las 7 señales negativas que afectan tu SEO en 2026 y cómo solucionarlas con herramientas gratuitas."
 category: "SEO"
-image: "/blog/senales-negativas-usuario-seo.png"
+image: "/blog/senales-negativas-usuario-seo.webp"
 date: "2026-06-08"
 ---
 

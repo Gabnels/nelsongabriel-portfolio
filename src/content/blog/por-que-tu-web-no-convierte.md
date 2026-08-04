@@ -2,7 +2,7 @@
 title: "Por qué tu página web no está generando clientes ni conversiones"
 excerpt: "Muchos negocios tienen una web bonita pero poco efectiva. Descubre los errores que frenan conversiones y cómo solucionarlos."
 category: "Diseño Web"
-image: "/blog/conversiones.png"
+image: "/blog/conversiones.webp"
 date: "2026-05-10"
 ---
 

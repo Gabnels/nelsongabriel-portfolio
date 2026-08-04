@@ -2,7 +2,7 @@
 title: "Cómo aumentar el tráfico desde Google sin depender de anuncios pagados (guía 2026)"
 excerpt: "Descubre estrategias probadas para atraer visitas cualificadas desde Google sin invertir en publicidad. SEO, contenido, herramientas y un plan de acción de 30 días."
 category: "SEO"
-image: "/blog/trafico-google.jpg"
+image: "/blog/trafico-google.webp"
 date: "2026-07-01"
 ---
 

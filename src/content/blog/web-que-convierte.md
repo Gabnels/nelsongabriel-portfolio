@@ -2,7 +2,7 @@
 title: "Cómo construir una página web que realmente convierta visitas en clientes (guía 2026)"
 excerpt: "Descubre los 7 pilares del diseño web estratégico: desde la arquitectura visual hasta la psicología del usuario, pasando por la velocidad y la experiencia móvil. Datos, ejemplos y pasos concretos para construir una web que venda."
 category: "Diseño Web"
-image: "/blog/web-convierte.jpg"
+image: "/blog/web-convierte.webp"
 date: "2026-06-30"
 ---
 

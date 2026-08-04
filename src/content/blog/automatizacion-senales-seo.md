@@ -2,7 +2,7 @@
 title: "Automatización de señales SEO: 7 herramientas para duplicar tu tráfico en 2026 (gratis y de pago)"
 excerpt: "¿Cansado de revisar datos manualmente? Descubre 7 herramientas para automatizar el análisis de señales SEO, mejorar el CTR y posicionar más rápido. Empieza hoy."
 category: "SEO"
-image: "/blog/automatizacion-senales-seo.png"
+image: "/blog/automatizacion-senales-seo.webp"
 date: "2026-06-30"
 ---
 

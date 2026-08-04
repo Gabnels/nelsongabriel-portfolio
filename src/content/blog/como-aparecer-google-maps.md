@@ -2,7 +2,7 @@
 title: "Cómo aparecer en Google Maps y conseguir clientes en 2026"
 excerpt: "Guía práctica para negocios locales que quieren más llamadas, visitas y clientes desde Google Maps."
 category: "SEO Local"
-image: "/blog/google-maps.jpg"
+image: "/blog/google-maps.webp"
 date: "2026-04-30"
 ---
 

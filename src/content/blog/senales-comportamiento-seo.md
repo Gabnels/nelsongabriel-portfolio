@@ -2,7 +2,7 @@
 title: "Señales de comportamiento del usuario en SEO: guía completa para mejorar posiciones en Google (2026)"
 excerpt: "Guía completa sobre señales de comportamiento en SEO: aprende qué son, cómo influyen en el posicionamiento y estrategias para mejorar tu CTR en 2026."
 category: "SEO"
-image: "/blog/senales-comportamiento-seo.png"
+image: "/blog/senales-comportamiento-seo.webp"
 date: "2026-06-08"
 ---
 

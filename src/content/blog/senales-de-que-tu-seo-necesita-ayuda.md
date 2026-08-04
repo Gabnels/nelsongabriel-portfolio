@@ -2,7 +2,7 @@
 title: "Señales de que tu SEO necesita ayuda urgente"
 excerpt: "Descubre los síntomas más comunes de un SEO mal optimizado y cómo afectan las ventas, visibilidad y crecimiento de un negocio."
 category: "SEO"
-image: "/blog/seo-ayuda.jpg"
+image: "/blog/seo-ayuda.webp"
 date: "2026-05-09"
 ---
 

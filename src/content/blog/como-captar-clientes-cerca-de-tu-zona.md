@@ -2,7 +2,7 @@
 title: "Cómo captar clientes cerca de tu zona sin depender únicamente de anuncios"
 excerpt: "Estrategias reales para negocios locales que quieren atraer clientes constantes desde Google Maps, SEO local y una presencia web optimizada."
 category: "SEO Local"
-image: "/blog/clientes-zona.png"
+image: "/blog/clientes-zona.webp"
 date: "2026-05-09"
 ---
 
