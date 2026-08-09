@@ -50,6 +50,14 @@
           required></textarea>
       </div>
 
+      <!-- Widget invisible de Cloudflare Turnstile con la Key corregida -->
+      <div
+        class="cf-turnstile"
+        data-sitekey="0x4AAAAAAEK0Zy40nW7JlWfA"
+        data-theme="dark"
+      >
+      </div>
+
       <!-- Botón -->
       <button
         id="submit-button"
@@ -60,11 +68,18 @@
       </button>
 
       <p id="form-error" class="hidden text-red-400 text-sm text-center">
-        Ocurrió un error. Intenta nuevamente.
+        Ocurrió un error o la verificación anti-spam falló. Intenta nuevamente.
       </p>
     </form>
   </div>
 </section>
+
+<!-- Script oficial de Cloudflare Turnstile -->
+<script
+  is:inline
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer></script>
 
 <script is:inline>
   const form = document.getElementById("contact-form");
@@ -106,6 +121,10 @@
         button.textContent = "Enviar solicitud";
 
         errorMessage.classList.remove("hidden");
+
+        if (window.turnstile) {
+          window.turnstile.reset();
+        }
       }
     });
   }
