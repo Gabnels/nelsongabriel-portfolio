@@ -20,6 +20,7 @@
     "@lucide/astro": "^1.14.0",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.4",
+    "@vercel/speed-insights": "^2.0.0",
     "aos": "^2.3.4",
     "astro": "^6.1.7",
     "lottie-web": "^5.13.0",
