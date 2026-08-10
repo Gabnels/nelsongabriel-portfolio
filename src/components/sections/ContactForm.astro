@@ -74,12 +74,34 @@
   </div>
 </section>
 
-<!-- Script oficial de Cloudflare Turnstile -->
-<script
-  is:inline
-  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-  async
-  defer></script>
+<!-- Carga diferida del script de Turnstile para proteger el rendimiento inicial -->
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const contactSection = document.getElementById("contacto");
+
+    if (!contactSection) return;
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const script = document.createElement("script");
+            script.src =
+              "https://challenges.cloudflare.com/turnstile/v0/api.js";
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+
+            observer.disconnect();
+          }
+        });
+      },
+      { rootMargin: "200px" },
+    );
+
+    observer.observe(contactSection);
+  });
+</script>
 
 <script is:inline>
   const form = document.getElementById("contact-form");
