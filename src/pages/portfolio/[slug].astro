@@ -10,9 +10,27 @@ export function getStaticPaths() {
 }
 
 const { project } = Astro.props;
+
+// Construcción segura de la URL canónica para este proyecto
+const canonicalPath = `/portfolio/${project.slug}`;
+const canonicalURL = new URL(canonicalPath, "https://nelson-gabriel.com").href;
+
+// Definimos un SEO schema sencillo para portafolio si es necesario
+const portfolioSchema = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: project.title,
+  description: project.description,
+  url: canonicalURL,
+  image: `https://nelson-gabriel.com${project.image}`,
+};
 ---
 
-<MainLayout title={project.seo?.title || project.title}>
+<MainLayout
+  title={project.seo?.title || project.title}
+  description={project.description}
+  schema={portfolioSchema}
+>
   <section class="py-28 max-w-4xl mx-auto px-4">
     <!-- IMAGEN + BADGE -->
     <div class="relative mb-10">
@@ -206,7 +224,6 @@ const { project } = Astro.props;
     }
 
     <!-- CTA FINAL PRO -->
-    <!-- BOTÓN VER SITIO EN VIVO (Solo para la veterinaria) -->
     {
       project.slug === "ilovemypet-veterinaria" && (
         <div class="flex justify-center mb-8">

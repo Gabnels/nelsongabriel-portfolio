@@ -12,7 +12,7 @@ export async function getStaticPaths() {
   }));
 }
 
-// 2. Obtención del post y renderizado (Método Astro v6)
+// 2. Obtención del post y renderizado
 const { post } = Astro.props;
 const { Content, headings } = await render(post);
 
@@ -40,7 +40,8 @@ const related = allPosts
   })
   .slice(0, 3);
 
-/* Schema Metadata (SEO) */
+/* Schema Metadata (SEO) - Corregido con URL absoluta consistente */
+const canonicalPath = `/blog/${post.id}`;
 const articleSchema = [
   {
     "@context": "https://schema.org",
@@ -63,7 +64,7 @@ const articleSchema = [
     datePublished: post.data.date.toISOString(),
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://nelson-gabriel.com/blog/${post.id}`,
+      "@id": new URL(canonicalPath, "https://nelson-gabriel.com").href,
     },
   },
 ];
@@ -215,18 +216,18 @@ const articleSchema = [
           <!-- AUTHOR BOX -->
           <div
             class="mt-16 max-w-3xl rounded-[2rem]
-         border border-white/10
-         bg-gradient-to-br from-neutral-900 to-neutral-950
-         p-8 md:p-10
-         shadow-[0_0_40px_rgba(0,0,0,0.35)]"
+          border border-white/10
+          bg-gradient-to-br from-neutral-900 to-neutral-950
+          p-8 md:p-10
+          shadow-[0_0_40px_rgba(0,0,0,0.35)]"
           >
             <div class="flex flex-col md:flex-row gap-8 items-start">
               <!-- AVATAR -->
               <div
                 class="w-20 h-20 rounded-2xl
-         overflow-hidden
-         border border-[var(--color-primary)]/20
-         shrink-0"
+          overflow-hidden
+          border border-[var(--color-primary)]/20
+          shrink-0"
               >
                 <img
                   src="/authors/nelson.jpg"
@@ -240,8 +241,8 @@ const articleSchema = [
                 <!-- LABEL -->
                 <p
                   class="text-sm uppercase tracking-[0.2em]
-               text-[var(--color-primary)]
-               font-semibold mb-3"
+              text-[var(--color-primary)]
+              font-semibold mb-3"
                 >
                   Autor del artículo
                 </p>
@@ -254,8 +255,8 @@ const articleSchema = [
                 <!-- ROLE -->
                 <p
                   class="text-neutral-400 mb-7
-         leading-relaxed
-         text-sm md:text-base"
+          leading-relaxed
+          text-sm md:text-base"
                 >
                   SEO Técnico · Core Web Vitals · SEO Local · UX & Conversión
                 </p>
@@ -269,50 +270,47 @@ const articleSchema = [
 
                 <!-- SOCIAL LINKS -->
                 <div class="flex flex-wrap gap-4 mt-8">
-                  <!-- LINKEDIN -->
                   <a
                     href="https://www.linkedin.com/in/nelsongabrielseo/"
                     target="_blank"
                     rel="noopener noreferrer"
                     onclick="trackEvent('linkedin_click')"
                     class="px-5 py-3 rounded-xl
-           bg-white/5 border border-white/10
-           hover:border-[var(--color-primary)]/40
-           hover:bg-[var(--color-primary)]/5
-           transition duration-300
-           text-sm text-neutral-300 hover:text-white"
+            bg-white/5 border border-white/10
+            hover:border-[var(--color-primary)]/40
+            hover:bg-[var(--color-primary)]/5
+            transition duration-300
+            text-sm text-neutral-300 hover:text-white"
                   >
                     LinkedIn
                   </a>
 
-                  <!-- GITHUB -->
                   <a
                     href="https://github.com/Gabnels"
                     target="_blank"
                     rel="noopener noreferrer"
                     onclick="trackEvent('github_click')"
                     class="px-5 py-3 rounded-xl
-           bg-white/5 border border-white/10
-           hover:border-[var(--color-primary)]/40
-           hover:bg-[var(--color-primary)]/5
-           transition duration-300
-           text-sm text-neutral-300 hover:text-white"
+            bg-white/5 border border-white/10
+            hover:border-[var(--color-primary)]/40
+            hover:bg-[var(--color-primary)]/5
+            transition duration-300
+            text-sm text-neutral-300 hover:text-white"
                   >
                     GitHub
                   </a>
 
-                  <!-- UPWORK -->
                   <a
                     href="https://www.upwork.com/freelancers/~01044acc3024ec008c?mp_source=share"
                     target="_blank"
                     rel="noopener noreferrer"
                     onclick="trackEvent('upwork_click')"
                     class="px-5 py-3 rounded-xl
-           bg-white/5 border border-white/10
-           hover:border-[var(--color-primary)]/40
-           hover:bg-[var(--color-primary)]/5
-           transition duration-300
-           text-sm text-neutral-300 hover:text-white"
+            bg-white/5 border border-white/10
+            hover:border-[var(--color-primary)]/40
+            hover:bg-[var(--color-primary)]/5
+            transition duration-300
+            text-sm text-neutral-300 hover:text-white"
                   >
                     Upwork
                   </a>

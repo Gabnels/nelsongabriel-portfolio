@@ -10,6 +10,9 @@ const {
   description = "Servicios SEO, SEO local y desarrollo web rápido. Atrae más clientes con estrategias profesionales.",
   schema = null,
 } = Astro.props;
+
+// Normalización de URL para evitar errores de duplicidad canónica
+const canonicalURL = new URL(Astro.url.pathname, "https://nelson-gabriel.com");
 ---
 
 <!doctype html>
@@ -24,10 +27,8 @@ const {
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#22c55e" />
 
-    <link
-      rel="canonical"
-      href={`https://nelson-gabriel.com${Astro.url.pathname}`}
-    />
+    <!-- URL Canónica corregida -->
+    <link rel="canonical" href={canonicalURL.href} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Open Graph -->
@@ -38,10 +39,7 @@ const {
       property="og:image"
       content="https://nelson-gabriel.com/og-cover.png"
     />
-    <meta
-      property="og:url"
-      content={`https://nelson-gabriel.com${Astro.url.pathname}`}
-    />
+    <meta property="og:url" content={canonicalURL.href} />
     <meta property="og:site_name" content="Nelson Gabriel" />
     <meta property="og:locale" content="es_ES" />
 
