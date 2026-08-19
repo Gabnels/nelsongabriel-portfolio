@@ -1,0 +1,36 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/www.nelson-gabriel.com/:path*",
+      "destination": "https://nelson-gabriel.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/seo-local-dentista/",
+      "destination": "/portfolio/seo-local-dentista",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/landing-restaurante/",
+      "destination": "/portfolio/landing-restaurante",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/blog-seo-nicho/",
+      "destination": "/portfolio/blog-seo-nicho",
+      "permanent": true
+    }
+  ]
+}
